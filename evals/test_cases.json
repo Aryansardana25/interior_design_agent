@@ -1,0 +1,22 @@
+[
+  {
+    "id": "BR-01",
+    "expected": "pass"
+  },
+  {
+    "id": "BR-06",
+    "expected": "budget_fail"
+  },
+  {
+    "id": "BR-07",
+    "expected": "reject"
+  },
+  {
+    "id": "BR-08",
+    "expected": "designer_reject"
+  },
+  {
+    "id": "BR-09",
+    "expected": "layout_fail"
+  }
+]
