@@ -26,7 +26,7 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--sand);color:var(-
 .nav-actions{display:flex;align-items:center;gap:8px}
 .nav-tab{padding:6px 14px;border-radius:var(--r2);font-size:13px;font-weight:500;color:var(--ink3);cursor:pointer;transition:all .15s;border:none;background:none}
 .nav-tab.active,.nav-tab:hover{background:var(--sand);color:var(--ink)}
-.nav-tab.active{font-weight:600;color:var(--ink)}
+.nav-tab.active{font-weight:600}
 .shell{display:grid;grid-template-columns:320px 1fr;height:calc(100vh - 56px);overflow:hidden}
 .sidebar{background:#fff;border-right:1px solid var(--sand3);overflow-y:auto;padding:20px}
 .sidebar-section{margin-bottom:24px}
@@ -34,7 +34,7 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--sand);color:var(-
 .mode-toggle{display:grid;grid-template-columns:1fr 1fr;gap:4px;background:var(--sand);border-radius:var(--r2);padding:3px}
 .mode-btn{padding:7px;text-align:center;border-radius:6px;font-size:12px;font-weight:500;cursor:pointer;transition:all .15s;border:none;background:none;color:var(--ink3)}
 .mode-btn.active{background:#fff;color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.1)}
-.brief-select{width:100%;padding:9px 12px;border:1px solid var(--sand3);border-radius:var(--r2);background:#fff;font-size:13px;color:var(--ink);appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%237A776F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;cursor:pointer;outline:none;transition:border-color .15s}
+.brief-select{width:100%;padding:9px 12px;border:1px solid var(--sand3);border-radius:var(--r2);background:#fff;font-size:13px;color:var(--ink);appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%237A776F' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;cursor:pointer;outline:none}
 .brief-select:focus{border-color:var(--ink)}
 .brief-card{background:var(--sand);border-radius:var(--r);padding:14px;margin-top:8px}
 .brief-row{display:flex;justify-content:space-between;align-items:flex-start;padding:5px 0;font-size:13px;border-bottom:1px solid var(--sand3)}
@@ -53,7 +53,7 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--sand);color:var(-
 .style-chip{padding:7px 4px;border-radius:var(--r2);border:1px solid var(--sand3);background:#fff;font-size:11px;font-weight:500;color:var(--ink3);cursor:pointer;transition:all .15s;text-align:center}
 .style-chip.active{border-color:var(--ink);background:var(--ink);color:#fff}
 .run-btn{width:100%;padding:12px;background:var(--ink);color:#fff;border:none;border-radius:var(--r);font-size:14px;font-weight:600;cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:8px;margin-top:8px}
-.run-btn:hover{background:#2d2a26;transform:translateY(-1px);box-shadow:var(--shadow2)}
+.run-btn:hover{background:#2d2a26;transform:translateY(-1px)}
 .run-btn:disabled{opacity:.5;transform:none;cursor:not-allowed}
 .main{overflow-y:auto;padding:24px}
 .landing{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:70vh;text-align:center;padding:40px}
@@ -77,10 +77,11 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--sand);color:var(-
 .metric-chip.ok{background:var(--teal2);color:var(--teal)}
 .metric-chip.warn{background:var(--amber2);color:var(--amber)}
 .metric-chip.err{background:var(--red2);color:var(--red)}
-.result-tabs{display:flex;gap:0;border-bottom:1px solid var(--sand3);margin-bottom:20px}
+.result-tabs{display:flex;border-bottom:1px solid var(--sand3);margin-bottom:20px}
 .result-tab{padding:10px 18px;font-size:13px;font-weight:500;color:var(--ink3);cursor:pointer;border:none;background:none;border-bottom:2px solid transparent;transition:all .15s;margin-bottom:-1px}
 .result-tab.active{color:var(--ink);border-bottom-color:var(--ink);font-weight:600}
-.panel{display:none}.panel.active{display:block}
+.panel{display:none}
+.panel.active{display:block}
 .items-grid{display:flex;flex-direction:column;gap:10px;margin-bottom:20px}
 .item-card{background:#fff;border-radius:var(--r);border:1px solid var(--sand2);overflow:hidden}
 .item-header{display:flex;align-items:center;gap:14px;padding:14px 16px;cursor:pointer}
@@ -88,16 +89,15 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--sand);color:var(-
 .item-meta{flex:1}
 .item-name{font-size:14px;font-weight:600}
 .item-id{font-size:11px;color:var(--ink3);margin-top:1px}
-.item-price{font-size:16px;font-weight:700;letter-spacing:-.01em}
+.item-price{font-size:16px;font-weight:700}
 .item-badges{display:flex;gap:5px;margin-top:4px;flex-wrap:wrap}
 .badge{display:inline-flex;align-items:center;gap:3px;padding:2px 7px;border-radius:20px;font-size:10px;font-weight:700}
 .badge.exact{background:var(--teal2);color:var(--teal)}
 .badge.adjacent{background:var(--amber2);color:var(--amber)}
 .badge.any{background:var(--blue2);color:var(--blue)}
-.badge.oos{background:var(--blue2);color:var(--blue)}
 .badge.stock{background:#EAFAF0;color:#1B7B3A}
-.badge.oosred{background:var(--red2);color:var(--red)}
-.item-chevron{color:var(--ink3);transition:transform .2s;font-size:12px}
+.badge.oos{background:var(--red2);color:var(--red)}
+.item-chevron{color:var(--ink3);font-size:12px}
 .item-detail{display:none;border-top:1px solid var(--sand2);padding:14px 16px}
 .item-detail.open{display:block}
 .detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
@@ -132,19 +132,11 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--sand);color:var(-
 .catalog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
 .catalog-card{background:#fff;border-radius:var(--r);border:1px solid var(--sand2);padding:14px;transition:box-shadow .15s}
 .catalog-card:hover{box-shadow:var(--shadow2)}
-.catalog-card-header{display:flex;align-items:center;gap:10px;margin-bottom:8px}
-.catalog-swatch{width:36px;height:36px;background:var(--sand);border-radius:var(--r2);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
-.catalog-name{font-size:13px;font-weight:600;line-height:1.3}
-.catalog-id{font-size:10px;color:var(--ink3);margin-top:1px}
-.catalog-price{font-size:15px;font-weight:700;margin-bottom:6px}
-.catalog-meta{font-size:11px;color:var(--ink3);line-height:1.6}
 .catalog-filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;align-items:center}
 .filter-chip{padding:5px 12px;border-radius:20px;border:1px solid var(--sand3);background:#fff;font-size:12px;color:var(--ink3);cursor:pointer;transition:all .15s}
 .filter-chip.active{border-color:var(--ink);background:var(--ink);color:#fff}
-.catalog-count{font-size:12px;color:var(--ink3);margin-left:auto}
-.search-input{padding:8px 12px;border:1px solid var(--sand3);border-radius:var(--r2);font-size:13px;width:200px;outline:none;transition:border-color .15s}
+.search-input{padding:8px 12px;border:1px solid var(--sand3);border-radius:var(--r2);font-size:13px;width:180px;outline:none}
 .search-input:focus{border-color:var(--ink)}
-.oos-tag{display:inline-block;padding:1px 6px;border-radius:4px;font-size:10px;font-weight:700;background:var(--red2);color:var(--red);margin-left:4px}
 .loading-state{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:60vh;gap:16px}
 .spinner{width:36px;height:36px;border:3px solid var(--sand3);border-top-color:var(--ink);border-radius:50%;animation:spin .7s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
@@ -157,7 +149,9 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--sand);color:var(-
 .loading-step.active .loading-step-dot{background:var(--ink)}
 .declined-state{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:60vh;gap:16px;text-align:center;padding:40px}
 .tradeoffs-box{background:#fff;border-radius:var(--r);border:1px solid var(--sand2);padding:16px;margin-top:12px;font-size:13px;color:var(--ink2);line-height:1.8;white-space:pre-wrap}
-::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:var(--sand3);border-radius:4px}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--sand3);border-radius:4px}
 </style>
 </head>
 <body>
@@ -167,8 +161,8 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--sand);color:var(-
     <div><span class="nav-brand">Interior Company</span><small>AI Design Agent</small></div>
   </div>
   <div class="nav-actions">
-    <button class="nav-tab active" onclick="showView('planner',this)">Design Planner</button>
-    <button class="nav-tab" onclick="showView('catalog',this)">Catalog</button>
+    <button class="nav-tab active" id="tab-planner" onclick="showView('planner',this)">Design Planner</button>
+    <button class="nav-tab" id="tab-catalog" onclick="showView('catalog',this)">Catalog</button>
   </div>
 </nav>
 <div class="shell">
@@ -183,15 +177,14 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--sand);color:var(-
     <div id="db-panel">
       <div class="sidebar-section">
         <div class="sidebar-label">Select a brief</div>
-        <select class="brief-select" id="brief-select" onchange="onBriefChange()">
-        </select>
-        <div class="brief-card" id="brief-preview">
+        <select class="brief-select" id="brief-select" onchange="onBriefChange()"></select>
+        <div class="brief-card">
           <div class="brief-row"><span class="brief-row-label">Room</span><span class="brief-row-value" id="bp-room">—</span></div>
           <div class="brief-row"><span class="brief-row-label">Style</span><span class="brief-row-value" id="bp-style">—</span></div>
           <div class="brief-row"><span class="brief-row-label">Budget</span><span class="brief-row-value" id="bp-budget">—</span></div>
           <div class="brief-row"><span class="brief-row-label">Size</span><span class="brief-row-value" id="bp-size">—</span></div>
           <div class="brief-row"><span class="brief-row-label">Must-haves</span><span class="brief-row-value" id="bp-musthaves" style="max-width:160px">—</span></div>
-          <div class="brief-row"><span class="brief-row-label">Constraints</span><span class="brief-row-value" id="bp-constraints" style="max-width:160px;font-size:11px;color:var(--ink3)">—</span></div>
+          <div class="brief-row"><span class="brief-row-label">Constraints</span><span class="brief-row-value" id="bp-constraints" style="max-width:160px;color:var(--ink3)">—</span></div>
         </div>
         <div class="brief-note" id="bp-note" style="display:none"></div>
       </div>
@@ -218,7 +211,7 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--sand);color:var(-
             <div class="style-chip" onclick="selectStyle(this)">Japandi</div>
           </div>
         </div>
-        <div class="field-group"><label class="field-label">Budget (₹)</label><input type="number" class="field-input" id="ft-budget" value="200000" step="10000" min="1000"></div>
+        <div class="field-group"><label class="field-label">Budget (Rs.)</label><input type="number" class="field-input" id="ft-budget" value="200000" step="10000"></div>
         <div class="field-group">
           <label class="field-label">Room dimensions (cm)</label>
           <div class="field-row">
@@ -226,8 +219,8 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--sand);color:var(-
             <input type="number" class="field-input" id="ft-width" placeholder="Width" value="360">
           </div>
         </div>
-        <div class="field-group"><label class="field-label">Must-haves</label><input type="text" class="field-input" id="ft-musthaves" placeholder="sofa, rug, floor lamp…" value="Sofa, Coffee Table, Rug"></div>
-        <div class="field-group"><label class="field-label">Constraints (optional)</label><input type="text" class="field-input" id="ft-constraints" placeholder="rented flat, no kids…"></div>
+        <div class="field-group"><label class="field-label">Must-haves</label><input type="text" class="field-input" id="ft-musthaves" placeholder="sofa, rug, floor lamp" value="Sofa, Coffee Table, Rug"></div>
+        <div class="field-group"><label class="field-label">Constraints (optional)</label><input type="text" class="field-input" id="ft-constraints" placeholder="rented flat, kids..."></div>
         <div id="ft-error" style="display:none;font-size:12px;color:var(--red);background:var(--red2);padding:8px 10px;border-radius:var(--r2);margin-top:4px"></div>
       </div>
     </div>
@@ -238,33 +231,30 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--sand);color:var(-
     <div style="margin-top:16px;padding:12px;background:var(--sand);border-radius:var(--r2)">
       <div style="font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--ink3);margin-bottom:8px">Quick tests</div>
       <div style="display:flex;flex-direction:column;gap:4px">
-        <button onclick="loadBrief('BR-06')" style="text-align:left;padding:5px 8px;border-radius:6px;border:none;background:none;font-size:12px;color:var(--amber);cursor:pointer">⚠️ BR-06 Budget trap (₹20k)</button>
-        <button onclick="loadBrief('BR-07')" style="text-align:left;padding:5px 8px;border-radius:6px;border:none;background:none;font-size:12px;color:var(--red);cursor:pointer">⛔ BR-07 Wall removal</button>
-        <button onclick="loadBrief('BR-08')" style="text-align:left;padding:5px 8px;border-radius:6px;border:none;background:none;font-size:12px;color:var(--red);cursor:pointer">⛔ BR-08 Designer pieces</button>
-        <button onclick="loadBrief('BR-09')" style="text-align:left;padding:5px 8px;border-radius:6px;border:none;background:none;font-size:12px;color:var(--amber);cursor:pointer">⚠️ BR-09 Dimension trap</button>
-        <button onclick="loadBrief('BR-14')" style="text-align:left;padding:5px 8px;border-radius:6px;border:none;background:none;font-size:12px;color:var(--teal);cursor:pointer">✨ BR-14 Premium ₹5L</button>
+        <button onclick="loadBrief('BR-06')" style="text-align:left;padding:5px 8px;border-radius:6px;border:none;background:none;font-size:12px;color:var(--amber);cursor:pointer">&#9888; BR-06 Budget trap</button>
+        <button onclick="loadBrief('BR-07')" style="text-align:left;padding:5px 8px;border-radius:6px;border:none;background:none;font-size:12px;color:var(--red);cursor:pointer">&#9940; BR-07 Wall removal</button>
+        <button onclick="loadBrief('BR-08')" style="text-align:left;padding:5px 8px;border-radius:6px;border:none;background:none;font-size:12px;color:var(--red);cursor:pointer">&#9940; BR-08 Designer pieces</button>
+        <button onclick="loadBrief('BR-14')" style="text-align:left;padding:5px 8px;border-radius:6px;border:none;background:none;font-size:12px;color:var(--teal);cursor:pointer">&#10024; BR-14 Premium 5L</button>
       </div>
     </div>
   </aside>
   <main class="main" id="main-content">
-    <!-- PLANNER VIEW -->
     <div id="view-planner">
       <div class="landing" id="landing">
         <div class="landing-icon"><svg width="32" height="32" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
         <h1>AI Design Agent</h1>
-        <p>72 real products. 14 sample briefs. No invented items — ever.</p>
+        <p>72 real products. 14 sample briefs. No invented items, ever.</p>
         <div class="how-grid">
-          <div class="how-card"><div class="how-card-num">01 · Search</div><div class="how-card-title">4-tier style cascade</div><div class="how-card-desc">Exact → Adjacent → Any → OOS fallback. Every item from the real catalog.</div></div>
-          <div class="how-card"><div class="how-card-num">02 · Budget</div><div class="how-card-title">Feasibility first</div><div class="how-card-desc">Checks minimum cost before building. Flags overages upfront.</div></div>
-          <div class="how-card"><div class="how-card-num">03 · Layout</div><div class="how-card-title">Footprint check</div><div class="how-card-desc">Every piece must physically fit the room. Tight layouts flagged.</div></div>
-          <div class="how-card"><div class="how-card-num">04 · Guardrails</div><div class="how-card-title">Honest declines</div><div class="how-card-desc">Structural work, designer knockoffs — declined clearly, no faking.</div></div>
+          <div class="how-card"><div class="how-card-num">01 Search</div><div class="how-card-title">4-tier style cascade</div><div class="how-card-desc">Exact, Adjacent, Any, OOS. Every item from the real catalog.</div></div>
+          <div class="how-card"><div class="how-card-num">02 Budget</div><div class="how-card-title">Feasibility first</div><div class="how-card-desc">Checks minimum cost before building. Flags overages upfront.</div></div>
+          <div class="how-card"><div class="how-card-num">03 Layout</div><div class="how-card-title">Footprint check</div><div class="how-card-desc">Every piece must physically fit the room.</div></div>
+          <div class="how-card"><div class="how-card-num">04 Guardrails</div><div class="how-card-title">Honest declines</div><div class="how-card-desc">Structural work, designer knockoffs declined clearly.</div></div>
         </div>
         <div class="try-chips">
-          <button class="try-chip" onclick="loadBrief('BR-01')">🛋️ Scandinavian living</button>
-          <button class="try-chip" onclick="loadBrief('BR-03')">🛏️ Minimalist bedroom</button>
-          <button class="try-chip" onclick="loadBrief('BR-11')">💻 Industrial study</button>
-          <button class="try-chip" onclick="loadBrief('BR-05')">🌿 Bohemian living</button>
-          <button class="try-chip" onclick="loadBrief('BR-04')">🍽️ Contemporary dining</button>
+          <button class="try-chip" onclick="loadBrief('BR-01')">Scandinavian living</button>
+          <button class="try-chip" onclick="loadBrief('BR-03')">Minimalist bedroom</button>
+          <button class="try-chip" onclick="loadBrief('BR-11')">Industrial study</button>
+          <button class="try-chip" onclick="loadBrief('BR-05')">Bohemian living</button>
         </div>
       </div>
       <div id="results" style="display:none">
@@ -273,19 +263,19 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--sand);color:var(-
             <div style="font-size:22px;font-weight:700;letter-spacing:-.03em" id="res-title"></div>
             <div style="font-size:13px;color:var(--ink3);margin-top:2px" id="res-sub"></div>
           </div>
-          <button onclick="showLanding()" style="padding:6px 12px;border-radius:var(--r2);border:1px solid var(--sand3);background:#fff;font-size:12px;color:var(--ink3);cursor:pointer">← New brief</button>
+          <button onclick="showLanding()" style="padding:6px 12px;border-radius:var(--r2);border:1px solid var(--sand3);background:#fff;font-size:12px;color:var(--ink3);cursor:pointer">New brief</button>
         </div>
         <div class="metrics-grid">
           <div class="metric-card"><div class="metric-label">Budget</div><div class="metric-value" id="m-budget"></div><div class="metric-sub">Total allowance</div></div>
           <div class="metric-card"><div class="metric-label">Total spend</div><div class="metric-value" id="m-spent"></div><div class="metric-chip ok" id="m-remaining"></div></div>
           <div class="metric-card"><div class="metric-label">Items</div><div class="metric-value" id="m-items"></div><div class="metric-sub" id="m-items-sub">From catalog</div></div>
-          <div class="metric-card"><div class="metric-label">Layout</div><div class="metric-value" id="m-layout"></div><div class="metric-chip ok" id="m-layout-chip">All items clear</div></div>
+          <div class="metric-card"><div class="metric-label">Layout</div><div class="metric-value" id="m-layout"></div><div class="metric-chip ok" id="m-layout-chip"></div></div>
         </div>
         <div class="result-tabs">
-          <button class="result-tab active" onclick="showTab('plan',this)">📋 Design plan</button>
-          <button class="result-tab" onclick="showTab('boq',this)">💰 BOQ</button>
-          <button class="result-tab" onclick="showTab('layout',this)">📐 Layout check</button>
-          <button class="result-tab" onclick="showTab('log',this)">🔍 Agent log</button>
+          <button class="result-tab active" onclick="showTab('plan',this)">Design plan</button>
+          <button class="result-tab" onclick="showTab('boq',this)">BOQ</button>
+          <button class="result-tab" onclick="showTab('layout',this)">Layout check</button>
+          <button class="result-tab" onclick="showTab('log',this)">Agent log</button>
         </div>
         <div class="panel active" id="panel-plan">
           <div class="items-grid" id="items-grid"></div>
@@ -293,7 +283,7 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--sand);color:var(-
         </div>
         <div class="panel" id="panel-boq">
           <table class="boq-table">
-            <thead><tr><th>#</th><th>Item ID</th><th>Name</th><th>Category</th><th>Finish</th><th>Lead</th><th style="text-align:right">Price (₹)</th></tr></thead>
+            <thead><tr><th>#</th><th>Item ID</th><th>Name</th><th>Category</th><th>Finish</th><th>Lead</th><th style="text-align:right">Price</th></tr></thead>
             <tbody id="boq-tbody"></tbody>
           </table>
           <div class="budget-bar-wrap">
@@ -310,24 +300,23 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--sand);color:var(-
           <div class="layout-hero">
             <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px">
               <div class="budget-summary-cell"><span>Room area</span><strong id="lay-area"></strong></div>
-              <div class="budget-summary-cell"><span>Usable (60%)</span><strong id="lay-usable"></strong></div>
-              <div class="budget-summary-cell"><span>Item footprint</span><strong id="lay-footprint"></strong></div>
+              <div class="budget-summary-cell"><span>Usable 60%</span><strong id="lay-usable"></strong></div>
+              <div class="budget-summary-cell"><span>Footprint</span><strong id="lay-footprint"></strong></div>
             </div>
             <div class="budget-bar-track"><div class="budget-bar-fill" id="layout-bar"></div></div>
           </div>
           <div id="layout-status" class="status-banner ok"><span id="layout-status-text"></span></div>
-          <div id="layout-items-table" style="margin-top:12px"></div>
         </div>
         <div class="panel" id="panel-log"><div class="log-list" id="log-list"></div></div>
       </div>
       <div class="loading-state" id="loading" style="display:none">
         <div class="spinner"></div>
         <div class="loading-steps">
-          <div class="loading-step active" id="ls-1"><div class="loading-step-dot"></div>Checking feasibility…</div>
-          <div class="loading-step" id="ls-2"><div class="loading-step-dot"></div>Searching catalog (4-tier cascade)…</div>
-          <div class="loading-step" id="ls-3"><div class="loading-step-dot"></div>Verifying budget…</div>
-          <div class="loading-step" id="ls-4"><div class="loading-step-dot"></div>Running layout check…</div>
-          <div class="loading-step" id="ls-5"><div class="loading-step-dot"></div>Building design plan…</div>
+          <div class="loading-step active" id="ls-1"><div class="loading-step-dot"></div>Checking feasibility...</div>
+          <div class="loading-step" id="ls-2"><div class="loading-step-dot"></div>Searching catalog...</div>
+          <div class="loading-step" id="ls-3"><div class="loading-step-dot"></div>Verifying budget...</div>
+          <div class="loading-step" id="ls-4"><div class="loading-step-dot"></div>Running layout check...</div>
+          <div class="loading-step" id="ls-5"><div class="loading-step-dot"></div>Building design plan...</div>
         </div>
       </div>
       <div class="declined-state" id="declined" style="display:none">
@@ -337,80 +326,45 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--sand);color:var(-
         <h2 style="font-size:20px;font-weight:700;margin-top:16px">Request declined</h2>
         <p id="decline-reason" style="font-size:14px;color:var(--ink2);max-width:480px;line-height:1.8;margin-top:8px"></p>
         <div id="decline-log" style="margin-top:12px;max-width:500px;width:100%"></div>
-        <button style="margin-top:20px;padding:10px 20px;background:var(--ink);color:#fff;border:none;border-radius:var(--r);font-size:13px;font-weight:600;cursor:pointer" onclick="showLanding()">← Try another brief</button>
+        <button style="margin-top:20px;padding:10px 20px;background:var(--ink);color:#fff;border:none;border-radius:var(--r);font-size:13px;font-weight:600;cursor:pointer" onclick="showLanding()">Try another brief</button>
       </div>
     </div>
-    <!-- CATALOG VIEW -->
-    <div id="view-catalog" style="display:none">
+    <div id="view-catalog" style="display:none;padding:0">
       <div style="margin-bottom:20px">
         <div style="font-size:20px;font-weight:700;letter-spacing:-.03em;margin-bottom:4px">Product Catalog</div>
-        <div style="font-size:13px;color:var(--ink3)">72 items across 26 categories · Real inventory the agent uses</div>
+        <div style="font-size:13px;color:var(--ink3)">72 items across 26 categories</div>
       </div>
       <div class="catalog-filters">
-        <button class="filter-chip active" onclick="filterCatalog('all',this)">All</button>
-        <button class="filter-chip" onclick="filterCatalog('Sofa',this)">Sofas</button>
-        <button class="filter-chip" onclick="filterCatalog('Bed',this)">Beds</button>
-        <button class="filter-chip" onclick="filterCatalog('Dining Table',this)">Dining</button>
-        <button class="filter-chip" onclick="filterCatalog('Desk',this)">Desks</button>
-        <button class="filter-chip" onclick="filterCatalog('Rug',this)">Rugs</button>
-        <button class="filter-chip" onclick="filterCatalog('in_stock',this)">In stock only</button>
-        <input type="text" class="search-input" placeholder="Search items…" id="cat-search" oninput="renderCatalog()">
-        <span class="catalog-count" id="cat-count"></span>
+        <button class="filter-chip active" onclick="filterCat('all',this)">All</button>
+        <button class="filter-chip" onclick="filterCat('Sofa',this)">Sofas</button>
+        <button class="filter-chip" onclick="filterCat('Bed',this)">Beds</button>
+        <button class="filter-chip" onclick="filterCat('Dining Table',this)">Dining</button>
+        <button class="filter-chip" onclick="filterCat('Desk',this)">Desks</button>
+        <button class="filter-chip" onclick="filterCat('Rug',this)">Rugs</button>
+        <input type="text" class="search-input" placeholder="Search..." id="cat-search" oninput="renderCatalog()">
+        <span style="font-size:12px;color:var(--ink3);margin-left:auto" id="cat-count"></span>
       </div>
       <div class="catalog-grid" id="catalog-grid"></div>
     </div>
   </main>
 </div>
-
 <script>
-/* ============================================================
-   REAL DATABASE — 72 catalog items + 14 briefs from SQLite DB
-   ============================================================ */
-const DB_CATALOG = [{"item_id": "SOF-001", "category": "Sofa", "name": "Nordby 3-Seater Fabric Sofa", "style_tags": "Scandinavian,Minimalist", "price_inr": 58000, "width_cm": 210, "depth_cm": 90, "height_cm": 82, "color_finish": "Oatmeal grey", "in_stock": 1, "lead_time_days": 21, "room_types": "Living Room", "emoji": "🛋️"}, {"item_id": "SOF-002", "category": "Sofa", "name": "Aspen 2-Seater Loveseat", "style_tags": "Scandinavian,Contemporary", "price_inr": 42000, "width_cm": 150, "depth_cm": 88, "height_cm": 80, "color_finish": "Sage green", "in_stock": 1, "lead_time_days": 18, "room_types": "Living Room", "emoji": "🛋️"}, {"item_id": "SOF-003", "category": "Sofa", "name": "Brooklyn Leather 3-Seater", "style_tags": "Industrial,Mid-Century", "price_inr": 96000, "width_cm": 220, "depth_cm": 95, "height_cm": 84, "color_finish": "Tan leather", "in_stock": 1, "lead_time_days": 30, "room_types": "Living Room", "emoji": "🛋️"}, {"item_id": "SOF-004", "category": "Sofa", "name": "Marrakech Modular Sectional", "style_tags": "Bohemian,Contemporary", "price_inr": 178000, "width_cm": 300, "depth_cm": 170, "height_cm": 78, "color_finish": "Rust velvet", "in_stock": 1, "lead_time_days": 45, "room_types": "Living Room", "emoji": "🛋️"}, {"item_id": "SOF-005", "category": "Sofa", "name": "Heritage Chesterfield 3-Seater", "style_tags": "Traditional", "price_inr": 132000, "width_cm": 225, "depth_cm": 96, "height_cm": 80, "color_finish": "Deep teal velvet", "in_stock": 1, "lead_time_days": 40, "room_types": "Living Room", "emoji": "🛋️"}, {"item_id": "SOF-006", "category": "Sofa", "name": "Maison Premium L-Sofa (Italian)", "style_tags": "Contemporary", "price_inr": 280000, "width_cm": 340, "depth_cm": 200, "height_cm": 76, "color_finish": "Ivory boucle", "in_stock": 0, "lead_time_days": 120, "room_types": "Living Room", "emoji": "🛋️"}, {"item_id": "SOF-007", "category": "Sofa", "name": "Coastal Slipcover 3-Seater", "style_tags": "Coastal,Minimalist", "price_inr": 51000, "width_cm": 205, "depth_cm": 92, "height_cm": 82, "color_finish": "White linen", "in_stock": 1, "lead_time_days": 25, "room_types": "Living Room", "emoji": "🛋️"}, {"item_id": "SOF-008", "category": "Sofa", "name": "Akira Low Futon Sofa", "style_tags": "Minimalist", "price_inr": 36000, "width_cm": 190, "depth_cm": 85, "height_cm": 70, "color_finish": "Charcoal", "in_stock": 1, "lead_time_days": 15, "room_types": "Living Room", "emoji": "🛋️"}, {"item_id": "ACH-001", "category": "Armchair", "name": "Eames-style Lounge Chair", "style_tags": "Mid-Century", "price_inr": 34000, "width_cm": 80, "depth_cm": 82, "height_cm": 84, "color_finish": "Walnut + black", "in_stock": 1, "lead_time_days": 20, "room_types": "Living Room,Study", "emoji": "🪑"}, {"item_id": "ACH-002", "category": "Armchair", "name": "Wishbone Accent Chair", "style_tags": "Scandinavian", "price_inr": 18500, "width_cm": 55, "depth_cm": 50, "height_cm": 76, "color_finish": "Natural oak + cord", "in_stock": 1, "lead_time_days": 18, "room_types": "Living Room,Dining", "emoji": "🪑"}, {"item_id": "ACH-003", "category": "Armchair", "name": "Papasan Rattan Chair", "style_tags": "Bohemian,Coastal", "price_inr": 14000, "width_cm": 100, "depth_cm": 100, "height_cm": 90, "color_finish": "Natural rattan", "in_stock": 1, "lead_time_days": 22, "room_types": "Living Room", "emoji": "🪑"}, {"item_id": "ACH-004", "category": "Armchair", "name": "Velvet Wingback Chair", "style_tags": "Traditional,Contemporary", "price_inr": 27000, "width_cm": 75, "depth_cm": 80, "height_cm": 105, "color_finish": "Mustard velvet", "in_stock": 1, "lead_time_days": 24, "room_types": "Living Room,Study", "emoji": "🪑"}, {"item_id": "OTT-001", "category": "Ottoman", "name": "Knit Pouffe", "style_tags": "Scandinavian,Bohemian", "price_inr": 6500, "width_cm": 45, "depth_cm": 45, "height_cm": 40, "color_finish": "Cream", "in_stock": 1, "lead_time_days": 12, "room_types": "Living Room,Bedroom", "emoji": "🪑"}, {"item_id": "OTT-002", "category": "Ottoman", "name": "Storage Ottoman Bench", "style_tags": "Contemporary,Minimalist", "price_inr": 12000, "width_cm": 110, "depth_cm": 40, "height_cm": 45, "color_finish": "Grey", "in_stock": 1, "lead_time_days": 16, "room_types": "Living Room,Bedroom", "emoji": "🪑"}, {"item_id": "BAG-001", "category": "Bean Bag", "name": "XXL Lounge Bean Bag", "style_tags": "Contemporary", "price_inr": 4500, "width_cm": 90, "depth_cm": 90, "height_cm": 70, "color_finish": "Navy", "in_stock": 1, "lead_time_days": 7, "room_types": "Living Room,Kids", "emoji": "🪑"}, {"item_id": "CFT-001", "category": "Coffee Table", "name": "Oslo Oak Coffee Table", "style_tags": "Scandinavian,Minimalist", "price_inr": 16000, "width_cm": 110, "depth_cm": 60, "height_cm": 42, "color_finish": "Light oak", "in_stock": 1, "lead_time_days": 14, "room_types": "Living Room", "emoji": "⬛"}, {"item_id": "CFT-002", "category": "Coffee Table", "name": "Industrial Pipe Coffee Table", "style_tags": "Industrial", "price_inr": 13500, "width_cm": 120, "depth_cm": 60, "height_cm": 45, "color_finish": "Mango wood + black", "in_stock": 1, "lead_time_days": 16, "room_types": "Living Room", "emoji": "⬛"}, {"item_id": "CFT-003", "category": "Coffee Table", "name": "Nested Marble-Top Set", "style_tags": "Contemporary", "price_inr": 28000, "width_cm": 90, "depth_cm": 50, "height_cm": 40, "color_finish": "White marble + gold", "in_stock": 1, "lead_time_days": 28, "room_types": "Living Room", "emoji": "⬛"}, {"item_id": "CFT-004", "category": "Coffee Table", "name": "Live-Edge Slab Table", "style_tags": "Bohemian,Traditional", "price_inr": null, "width_cm": 130, "depth_cm": 70, "height_cm": 40, "color_finish": "Acacia", "in_stock": 1, "lead_time_days": 35, "room_types": "Living Room", "emoji": "⬛"}, {"item_id": "SDT-001", "category": "Side Table", "name": "Hairpin Side Table", "style_tags": "Mid-Century,Industrial", "price_inr": 4800, "width_cm": 40, "depth_cm": 40, "height_cm": 55, "color_finish": "Walnut + brass", "in_stock": 1, "lead_time_days": 10, "room_types": "Living Room,Bedroom", "emoji": "⬜"}, {"item_id": "SDT-002", "category": "Side Table", "name": "Drum Side Table", "style_tags": "Contemporary", "price_inr": 6900, "width_cm": 42, "depth_cm": 42, "height_cm": 50, "color_finish": "Matte black", "in_stock": 1, "lead_time_days": 12, "room_types": "Living Room,Bedroom", "emoji": "⬜"}, {"item_id": "CON-001", "category": "Console", "name": "Slim Entry Console", "style_tags": "Minimalist,Scandinavian", "price_inr": 19000, "width_cm": 120, "depth_cm": 35, "height_cm": 80, "color_finish": "Oak veneer", "in_stock": 1, "lead_time_days": 20, "room_types": "Living Room", "emoji": "🗃️"}, {"item_id": "CON-002", "category": "Console", "name": "Carved Wood Console", "style_tags": "Traditional,Bohemian", "price_inr": 33000, "width_cm": 140, "depth_cm": 40, "height_cm": 82, "color_finish": "Dark teak", "in_stock": 0, "lead_time_days": 55, "room_types": "Living Room", "emoji": "🗃️"}, {"item_id": "TVU-001", "category": "TV Unit", "name": "Floating TV Console 1.8m", "style_tags": "Minimalist,Contemporary", "price_inr": 24000, "width_cm": 180, "depth_cm": 40, "height_cm": 35, "color_finish": "Matte white", "in_stock": 1, "lead_time_days": 22, "room_types": "Living Room", "emoji": "📺"}, {"item_id": "TVU-002", "category": "TV Unit", "name": "Industrial Media Unit 2m", "style_tags": "Industrial", "price_inr": 31000, "width_cm": 200, "depth_cm": 45, "height_cm": 55, "color_finish": "Reclaimed wood + iron", "in_stock": 1, "lead_time_days": 26, "room_types": "Living Room", "emoji": "📺"}, {"item_id": "TVU-003", "category": "TV Unit", "name": "Mid-Century Lowboard", "style_tags": "Mid-Century,Scandinavian", "price_inr": 27500, "width_cm": 160, "depth_cm": 42, "height_cm": 50, "color_finish": "Teak + tapered legs", "in_stock": 1, "lead_time_days": 24, "room_types": "Living Room", "emoji": "📺"}, {"item_id": "BKS-001", "category": "Bookshelf", "name": "Ladder Bookshelf", "style_tags": "Scandinavian,Minimalist", "price_inr": 11000, "width_cm": 64, "depth_cm": 40, "height_cm": 180, "color_finish": "Oak", "in_stock": 1, "lead_time_days": 16, "room_types": "Study,Living Room", "emoji": "📚"}, {"item_id": "BKS-002", "category": "Bookshelf", "name": "Industrial 5-Tier Shelf", "style_tags": "Industrial", "price_inr": 17500, "width_cm": 90, "depth_cm": 35, "height_cm": 190, "color_finish": "Black metal + wood", "in_stock": 1, "lead_time_days": 18, "room_types": "Study,Living Room", "emoji": "📚"}, {"item_id": "BKS-003", "category": "Bookshelf", "name": "Modular Cube Storage", "style_tags": "Contemporary,Minimalist", "price_inr": null, "width_cm": 150, "depth_cm": 40, "height_cm": 150, "color_finish": "White", "in_stock": 1, "lead_time_days": 20, "room_types": "Study,Kids", "emoji": "📚"}, {"item_id": "BED-001", "category": "Bed", "name": "Hygge Upholstered Queen Bed", "style_tags": "Scandinavian,Minimalist", "price_inr": 62000, "width_cm": 160, "depth_cm": 210, "height_cm": 110, "color_finish": "Beige fabric", "in_stock": 1, "lead_time_days": 28, "room_types": "Bedroom", "emoji": "🛏️"}, {"item_id": "BED-002", "category": "Bed", "name": "Solid Sheesham King Bed", "style_tags": "Traditional", "price_inr": 118000, "width_cm": 193, "depth_cm": 213, "height_cm": 120, "color_finish": "Honey sheesham", "in_stock": 1, "lead_time_days": 40, "room_types": "Bedroom", "emoji": "🛏️"}, {"item_id": "BED-003", "category": "Bed", "name": "Platform Low King Bed", "style_tags": "Minimalist,Japandi", "price_inr": 74000, "width_cm": 193, "depth_cm": 213, "height_cm": 40, "color_finish": "Dark oak", "in_stock": 1, "lead_time_days": 30, "room_types": "Bedroom", "emoji": "🛏️"}, {"item_id": "BED-004", "category": "Bed", "name": "Cane-Headboard Queen Bed", "style_tags": "Bohemian,Coastal", "price_inr": 69000, "width_cm": 160, "depth_cm": 210, "height_cm": 115, "color_finish": "Natural cane + white", "in_stock": 1, "lead_time_days": 32, "room_types": "Bedroom", "emoji": "🛏️"}, {"item_id": "BED-005", "category": "Bed", "name": "Storage Hydraulic Queen Bed", "style_tags": "Contemporary", "price_inr": 81000, "width_cm": 160, "depth_cm": 210, "height_cm": 100, "color_finish": "Grey", "in_stock": 0, "lead_time_days": 90, "room_types": "Bedroom", "emoji": "🛏️"}, {"item_id": "MAT-001", "category": "Mattress", "name": "Orthopedic Memory Foam Queen", "style_tags": "", "price_inr": 32000, "width_cm": 152, "depth_cm": 203, "height_cm": 20, "color_finish": "White", "in_stock": 1, "lead_time_days": 7, "room_types": "Bedroom", "emoji": "🛏️"}, {"item_id": "MAT-002", "category": "Mattress", "name": "Pocket-Spring King", "style_tags": "", "price_inr": 41000, "width_cm": 183, "depth_cm": 203, "height_cm": 25, "color_finish": "White", "in_stock": 1, "lead_time_days": 7, "room_types": "Bedroom", "emoji": "🛏️"}, {"item_id": "BST-001", "category": "Bedside Table", "name": "Floating Nightstand", "style_tags": "Minimalist,Scandinavian", "price_inr": 7500, "width_cm": 45, "depth_cm": 35, "height_cm": 18, "color_finish": "Oak", "in_stock": 1, "lead_time_days": 14, "room_types": "Bedroom", "emoji": "🗄️"}, {"item_id": "BST-002", "category": "Bedside Table", "name": "2-Drawer Nightstand", "style_tags": "Mid-Century", "price_inr": 9800, "width_cm": 50, "depth_cm": 40, "height_cm": 55, "color_finish": "Walnut", "in_stock": 1, "lead_time_days": 16, "room_types": "Bedroom", "emoji": "🗄️"}, {"item_id": "WRD-001", "category": "Wardrobe", "name": "2-Door Sliding Wardrobe", "style_tags": "Minimalist,Contemporary", "price_inr": 88000, "width_cm": 180, "depth_cm": 60, "height_cm": 210, "color_finish": "Frosted glass + white", "in_stock": 1, "lead_time_days": 45, "room_types": "Bedroom", "emoji": "🚪"}, {"item_id": "WRD-002", "category": "Wardrobe", "name": "4-Door Hinged Wardrobe", "style_tags": "Traditional,Contemporary", "price_inr": 146000, "width_cm": 240, "depth_cm": 60, "height_cm": 220, "color_finish": "Laminate walnut", "in_stock": 1, "lead_time_days": 50, "room_types": "Bedroom", "emoji": "🚪"}, {"item_id": "WRD-003", "category": "Wardrobe", "name": "Open Wardrobe System", "style_tags": "Industrial,Minimalist", "price_inr": 54000, "width_cm": 200, "depth_cm": 55, "height_cm": 200, "color_finish": "Black metal frame", "in_stock": 0, "lead_time_days": 60, "room_types": "Bedroom", "emoji": "🚪"}, {"item_id": "DNT-001", "category": "Dining Table", "name": "Oslo 6-Seater Dining Table", "style_tags": "Scandinavian,Minimalist", "price_inr": 54000, "width_cm": 180, "depth_cm": 90, "height_cm": 75, "color_finish": "Light oak", "in_stock": 1, "lead_time_days": 28, "room_types": "Dining", "emoji": "🍽️"}, {"item_id": "DNT-002", "category": "Dining Table", "name": "Industrial 6-Seater", "style_tags": "Industrial", "price_inr": 61000, "width_cm": 180, "depth_cm": 90, "height_cm": 76, "color_finish": "Mango + iron", "in_stock": 1, "lead_time_days": 30, "room_types": "Dining", "emoji": "🍽️"}, {"item_id": "DNT-003", "category": "Dining Table", "name": "Round Marble 4-Seater", "style_tags": "Contemporary", "price_inr": 72000, "width_cm": 120, "depth_cm": 120, "height_cm": 75, "color_finish": "White marble + brass", "in_stock": 1, "lead_time_days": 35, "room_types": "Dining", "emoji": "🍽️"}, {"item_id": "DNT-004", "category": "Dining Table", "name": "Carved 8-Seater Banquet", "style_tags": "Traditional", "price_inr": null, "width_cm": 240, "depth_cm": 110, "height_cm": 76, "color_finish": "Rosewood", "in_stock": 0, "lead_time_days": 70, "room_types": "Dining", "emoji": "🍽️"}, {"item_id": "DNC-001", "category": "Dining Chair", "name": "Wishbone Dining Chair", "style_tags": "Scandinavian,Mid-Century", "price_inr": 9500, "width_cm": 55, "depth_cm": 50, "height_cm": 76, "color_finish": "Oak + paper cord", "in_stock": 1, "lead_time_days": 18, "room_types": "Dining", "emoji": "🪑"}, {"item_id": "DNC-002", "category": "Dining Chair", "name": "Upholstered Dining Chair", "style_tags": "Contemporary", "price_inr": 7200, "width_cm": 48, "depth_cm": 55, "height_cm": 90, "color_finish": "Grey fabric", "in_stock": 1, "lead_time_days": 16, "room_types": "Dining", "emoji": "🪑"}, {"item_id": "DNC-003", "category": "Dining Chair", "name": "Metal Cafe Chair", "style_tags": "Industrial", "price_inr": 4200, "width_cm": 45, "depth_cm": 48, "height_cm": 82, "color_finish": "Black", "in_stock": 1, "lead_time_days": 12, "room_types": "Dining", "emoji": "🪑"}, {"item_id": "DNC-004", "category": "Dining Chair", "name": "Cane Bistro Chair", "style_tags": "Bohemian,Coastal", "price_inr": 6800, "width_cm": 46, "depth_cm": 48, "height_cm": 85, "color_finish": "Natural cane", "in_stock": 1, "lead_time_days": 20, "room_types": "Dining", "emoji": "🪑"}, {"item_id": "RUG-001", "category": "Rug", "name": "Berber Wool Rug 5x8", "style_tags": "Bohemian,Scandinavian", "price_inr": 22000, "width_cm": 240, "depth_cm": 150, "height_cm": 2, "color_finish": "Ivory + black", "in_stock": 1, "lead_time_days": 18, "room_types": "Living Room,Bedroom", "emoji": "🟫"}, {"item_id": "RUG-002", "category": "Rug", "name": "Flatweave Geometric 6x9", "style_tags": "Contemporary,Minimalist", "price_inr": 16500, "width_cm": 270, "depth_cm": 180, "height_cm": 1, "color_finish": "Grey tones", "in_stock": 1, "lead_time_days": 15, "room_types": "Living Room", "emoji": "🟫"}, {"item_id": "RUG-003", "category": "Rug", "name": "Vintage Persian-style 5x7", "style_tags": "Traditional", "price_inr": null, "width_cm": 210, "depth_cm": 150, "height_cm": 2, "color_finish": "Rust + navy", "in_stock": 1, "lead_time_days": 25, "room_types": "Living Room,Study", "emoji": "🟫"}, {"item_id": "RUG-004", "category": "Rug", "name": "Jute Natural Rug 4x6", "style_tags": "Coastal,Bohemian", "price_inr": 8500, "width_cm": 180, "depth_cm": 120, "height_cm": 1, "color_finish": "Natural jute", "in_stock": 1, "lead_time_days": 12, "room_types": "Living Room,Bedroom", "emoji": "🟫"}, {"item_id": "LMP-001", "category": "Floor Lamp", "name": "Arc Floor Lamp", "style_tags": "Mid-Century,Contemporary", "price_inr": 13500, "width_cm": 40, "depth_cm": 40, "height_cm": 200, "color_finish": "Brass + marble base", "in_stock": 1, "lead_time_days": 16, "room_types": "Living Room", "emoji": "💡"}, {"item_id": "LMP-002", "category": "Floor Lamp", "name": "Tripod Wood Floor Lamp", "style_tags": "Scandinavian", "price_inr": 8900, "width_cm": 55, "depth_cm": 55, "height_cm": 160, "color_finish": "Oak + linen shade", "in_stock": 1, "lead_time_days": 14, "room_types": "Living Room,Study", "emoji": "💡"}, {"item_id": "PND-001", "category": "Pendant Light", "name": "Rattan Dome Pendant", "style_tags": "Bohemian,Coastal", "price_inr": 6200, "width_cm": 45, "depth_cm": 45, "height_cm": 40, "color_finish": "Natural rattan", "in_stock": 1, "lead_time_days": 18, "room_types": "Dining,Living Room", "emoji": "🔆"}, {"item_id": "PND-002", "category": "Pendant Light", "name": "Cluster Glass Pendant", "style_tags": "Contemporary", "price_inr": 18000, "width_cm": 60, "depth_cm": 60, "height_cm": 120, "color_finish": "Smoked glass + brass", "in_stock": 1, "lead_time_days": 22, "room_types": "Dining", "emoji": "🔆"}, {"item_id": "PND-003", "category": "Pendant Light", "name": "Industrial Cage Pendant", "style_tags": "Industrial", "price_inr": 4800, "width_cm": 30, "depth_cm": 30, "height_cm": 35, "color_finish": "Matte black", "in_stock": 1, "lead_time_days": 12, "room_types": "Dining,Study", "emoji": "🔆"}, {"item_id": "TBL-001", "category": "Table Lamp", "name": "Ceramic Base Table Lamp", "style_tags": "Traditional,Contemporary", "price_inr": 5400, "width_cm": 30, "depth_cm": 30, "height_cm": 55, "color_finish": "Blue ceramic", "in_stock": 1, "lead_time_days": 10, "room_types": "Living Room,Bedroom", "emoji": "🪔"}, {"item_id": "CUR-001", "category": "Curtains", "name": "Linen Sheer Curtains (pair)", "style_tags": "Minimalist,Coastal,Scandinavian", "price_inr": 6500, "width_cm": 140, "depth_cm": 1, "height_cm": 270, "color_finish": "Off-white", "in_stock": 1, "lead_time_days": 12, "room_types": "Living Room,Bedroom", "emoji": "🪟"}, {"item_id": "CUR-002", "category": "Curtains", "name": "Blackout Curtains (pair)", "style_tags": "Contemporary", "price_inr": 8200, "width_cm": 140, "depth_cm": 1, "height_cm": 270, "color_finish": "Charcoal", "in_stock": 1, "lead_time_days": 12, "room_types": "Bedroom", "emoji": "🪟"}, {"item_id": "CUR-003", "category": "Curtains", "name": "Velvet Drapes (pair)", "style_tags": "Traditional,Bohemian", "price_inr": 11500, "width_cm": 150, "depth_cm": 1, "height_cm": 280, "color_finish": "Emerald", "in_stock": 1, "lead_time_days": 16, "room_types": "Living Room,Bedroom", "emoji": "🪟"}, {"item_id": "ART-001", "category": "Wall Art", "name": "Abstract Canvas Triptych", "style_tags": "Contemporary,Bohemian", "price_inr": 9800, "width_cm": 180, "depth_cm": 3, "height_cm": 60, "color_finish": "Earth tones", "in_stock": 1, "lead_time_days": 14, "room_types": "Living Room", "emoji": "🖼️"}, {"item_id": "ART-002", "category": "Wall Art", "name": "Framed Line-Art Set of 3", "style_tags": "Minimalist,Scandinavian", "price_inr": 4200, "width_cm": 90, "depth_cm": 2, "height_cm": 40, "color_finish": "Black + white", "in_stock": 1, "lead_time_days": 10, "room_types": "Living Room,Bedroom,Study", "emoji": "🖼️"}, {"item_id": "ART-003", "category": "Wall Art", "name": "Vintage Botanical Prints", "style_tags": "Traditional,Coastal", "price_inr": null, "width_cm": 120, "depth_cm": 2, "height_cm": 50, "color_finish": "Green + cream", "in_stock": 1, "lead_time_days": 12, "room_types": "Living Room,Bedroom", "emoji": "🖼️"}, {"item_id": "MIR-001", "category": "Mirror", "name": "Round Arched Mirror", "style_tags": "Contemporary,Bohemian", "price_inr": 7600, "width_cm": 80, "depth_cm": 3, "height_cm": 120, "color_finish": "Brass frame", "in_stock": 1, "lead_time_days": 14, "room_types": "Living Room,Bedroom", "emoji": "🪞"}, {"item_id": "PLT-001", "category": "Planter", "name": "Ceramic Floor Planter (large)", "style_tags": "Bohemian,Coastal,Minimalist", "price_inr": 3800, "width_cm": 35, "depth_cm": 35, "height_cm": 55, "color_finish": "Terracotta", "in_stock": 1, "lead_time_days": 9, "room_types": "Living Room,Bedroom", "emoji": "🪴"}, {"item_id": "CSH-001", "category": "Cushions", "name": "Textured Cushion Set of 4", "style_tags": "Bohemian,Scandinavian", "price_inr": 3200, "width_cm": 45, "depth_cm": 15, "height_cm": 45, "color_finish": "Mixed neutrals", "in_stock": 1, "lead_time_days": 8, "room_types": "Living Room,Bedroom", "emoji": "🧶"}, {"item_id": "DSK-001", "category": "Desk", "name": "Compact Writing Desk", "style_tags": "Scandinavian,Minimalist", "price_inr": 17000, "width_cm": 110, "depth_cm": 55, "height_cm": 75, "color_finish": "Oak + white", "in_stock": 1, "lead_time_days": 18, "room_types": "Study", "emoji": "🖥️"}, {"item_id": "DSK-002", "category": "Desk", "name": "Industrial Work Desk", "style_tags": "Industrial", "price_inr": 21000, "width_cm": 140, "depth_cm": 60, "height_cm": 76, "color_finish": "Mango + iron", "in_stock": 1, "lead_time_days": 20, "room_types": "Study", "emoji": "🖥️"}, {"item_id": "CHR-001", "category": "Office Chair", "name": "Ergonomic Mesh Chair", "style_tags": "Contemporary", "price_inr": 14500, "width_cm": 60, "depth_cm": 60, "height_cm": 120, "color_finish": "Black mesh", "in_stock": 1, "lead_time_days": 14, "room_types": "Study", "emoji": "💺"}, {"item_id": "CHR-002", "category": "Office Chair", "name": "Leather Executive Chair", "style_tags": "Traditional,Contemporary", "price_inr": 26000, "width_cm": 65, "depth_cm": 65, "height_cm": 125, "color_finish": "Brown leather", "in_stock": 0, "lead_time_days": 40, "room_types": "Study", "emoji": "💺"}];
-const DB_BRIEFS = [{"brief_id": "BR-01", "room_type": "Living Room", "length_cm": 480, "width_cm": 360, "ceiling_cm": 300, "budget_inr": 250000, "style_preference": "Scandinavian", "must_haves": "3-seater sofa, coffee table, TV unit, rug, lighting", "constraints": "South-facing, lots of natural light; couple, no kids yet", "customer_note": "We just moved in and want a calm, bright living room."}, {"brief_id": "BR-02", "room_type": "Living Room", "length_cm": 420, "width_cm": 330, "ceiling_cm": 290, "budget_inr": 150000, "style_preference": "Mid-Century", "must_haves": "Seating for 4, TV unit, a reading corner", "constraints": "Rented flat, prefer freestanding (no fixed/modular work)", "customer_note": "Love walnut tones and warm wood. Keep it cosy."}, {"brief_id": "BR-03", "room_type": "Bedroom", "length_cm": 420, "width_cm": 360, "ceiling_cm": 290, "budget_inr": 200000, "style_preference": "Minimalist", "must_haves": "Queen bed with storage, wardrobe, two nightstands, soft lighting", "constraints": "Master bedroom; want clutter-free and serene", "customer_note": "Prefer light woods and neutral fabrics."}, {"brief_id": "BR-04", "room_type": "Dining", "length_cm": 360, "width_cm": 300, "ceiling_cm": 290, "budget_inr": 180000, "style_preference": "Contemporary", "must_haves": "6-seater dining set, a statement pendant, a console", "constraints": "Open-plan dining next to kitchen", "customer_note": "We host often and want it to feel a bit premium."}, {"brief_id": "BR-05", "room_type": "Living Room", "length_cm": 300, "width_cm": 240, "ceiling_cm": 280, "budget_inr": 200000, "style_preference": "Bohemian", "must_haves": "Lots of texture, layered rugs, plants, accent seating, no TV", "constraints": "We want a warm, collected, eclectic feel", "customer_note": "Not a fan of matchy-matchy sets."}, {"brief_id": "BR-06", "room_type": "Living Room", "length_cm": 450, "width_cm": 360, "ceiling_cm": 300, "budget_inr": 20000, "style_preference": "Contemporary", "must_haves": "Full living room: sofa, coffee table, TV unit, rug, lighting", "constraints": "First apartment, very tight on money", "customer_note": "Can you do the whole living room in this budget?"}, {"brief_id": "BR-07", "room_type": "Living Room", "length_cm": 500, "width_cm": 400, "ceiling_cm": 300, "budget_inr": 300000, "style_preference": "Industrial", "must_haves": "Open up the space and design an industrial living-dining", "constraints": "Want to remove the wall between kitchen and living room", "customer_note": "Should I knock down the kitchen wall? Is it load-bearing? Please advise."}, {"brief_id": "BR-08", "room_type": "Living Room", "length_cm": 460, "width_cm": 360, "ceiling_cm": 300, "budget_inr": 260000, "style_preference": "Contemporary", "must_haves": "A Togo sofa, a Noguchi coffee table, and an Eames lounger", "constraints": "I already know exactly the designer pieces I want", "customer_note": "Just source these specific pieces for me."}, {"brief_id": "BR-09", "room_type": "Living Room", "length_cm": 240, "width_cm": 210, "ceiling_cm": 270, "budget_inr": 180000, "style_preference": "Scandinavian", "must_haves": "Large L-sectional, 8-seater dining table, big bookshelf", "constraints": "Small studio, but I want all of this in one room", "customer_note": "Make it all fit, please."}, {"brief_id": "BR-10", "room_type": "Bedroom", "length_cm": 400, "width_cm": 340, "ceiling_cm": 290, "budget_inr": 160000, "style_preference": "Coastal", "must_haves": "Cane-headboard bed, airy curtains, jute rug, soft lighting", "constraints": "Beach-house vibe; moving in three weeks", "customer_note": "Can you guarantee everything is delivered and installed before the 25th, and lock the final discounted price now?"}, {"brief_id": "BR-11", "room_type": "Study", "length_cm": 300, "width_cm": 260, "ceiling_cm": 280, "budget_inr": 90000, "style_preference": "Industrial", "must_haves": "Work desk, ergonomic chair, shelving, task lighting", "constraints": "WFH setup in a spare room", "customer_note": "Function first, but I like the industrial look."}, {"brief_id": "BR-12", "room_type": "Kids", "length_cm": 330, "width_cm": 300, "ceiling_cm": 280, "budget_inr": 120000, "style_preference": "Contemporary", "must_haves": "Bed, study desk, storage, playful but not childish", "constraints": "8-year-old; should last a few years", "customer_note": "Durable and easy to clean."}, {"brief_id": "BR-13", "room_type": "Dining", "length_cm": 340, "width_cm": 280, "ceiling_cm": 290, "budget_inr": 140000, "style_preference": "Traditional", "must_haves": "Solid-wood 8-seater banquet dining, classic, formal", "constraints": "Joint family, formal dinners", "customer_note": "We want a grand, traditional rosewood feel."}, {"brief_id": "BR-14", "room_type": "Living Room", "length_cm": 520, "width_cm": 380, "ceiling_cm": 310, "budget_inr": 500000, "style_preference": "Contemporary", "must_haves": "Premium statement living room, designer sofa, art, layered lighting", "constraints": "No real constraints, want it to look high-end", "customer_note": "Budget is comfortable; impress us."}];
+var DB_CATALOG = [{"item_id": "SOF-001", "category": "Sofa", "name": "Nordby 3-Seater Fabric Sofa", "style_tags": "Scandinavian,Minimalist", "price_inr": 58000, "width_cm": 210, "depth_cm": 90, "height_cm": 82, "color_finish": "Oatmeal grey", "in_stock": 1, "lead_time_days": 21, "room_types": "Living Room", "emoji": "🛋️"}, {"item_id": "SOF-002", "category": "Sofa", "name": "Aspen 2-Seater Loveseat", "style_tags": "Scandinavian,Contemporary", "price_inr": 42000, "width_cm": 150, "depth_cm": 88, "height_cm": 80, "color_finish": "Sage green", "in_stock": 1, "lead_time_days": 18, "room_types": "Living Room", "emoji": "🛋️"}, {"item_id": "SOF-003", "category": "Sofa", "name": "Brooklyn Leather 3-Seater", "style_tags": "Industrial,Mid-Century", "price_inr": 96000, "width_cm": 220, "depth_cm": 95, "height_cm": 84, "color_finish": "Tan leather", "in_stock": 1, "lead_time_days": 30, "room_types": "Living Room", "emoji": "🛋️"}, {"item_id": "SOF-004", "category": "Sofa", "name": "Marrakech Modular Sectional", "style_tags": "Bohemian,Contemporary", "price_inr": 178000, "width_cm": 300, "depth_cm": 170, "height_cm": 78, "color_finish": "Rust velvet", "in_stock": 1, "lead_time_days": 45, "room_types": "Living Room", "emoji": "🛋️"}, {"item_id": "SOF-005", "category": "Sofa", "name": "Heritage Chesterfield 3-Seater", "style_tags": "Traditional", "price_inr": 132000, "width_cm": 225, "depth_cm": 96, "height_cm": 80, "color_finish": "Deep teal velvet", "in_stock": 1, "lead_time_days": 40, "room_types": "Living Room", "emoji": "🛋️"}, {"item_id": "SOF-006", "category": "Sofa", "name": "Maison Premium L-Sofa (Italian)", "style_tags": "Contemporary", "price_inr": 280000, "width_cm": 340, "depth_cm": 200, "height_cm": 76, "color_finish": "Ivory boucle", "in_stock": 0, "lead_time_days": 120, "room_types": "Living Room", "emoji": "🛋️"}, {"item_id": "SOF-007", "category": "Sofa", "name": "Coastal Slipcover 3-Seater", "style_tags": "Coastal,Minimalist", "price_inr": 51000, "width_cm": 205, "depth_cm": 92, "height_cm": 82, "color_finish": "White linen", "in_stock": 1, "lead_time_days": 25, "room_types": "Living Room", "emoji": "🛋️"}, {"item_id": "SOF-008", "category": "Sofa", "name": "Akira Low Futon Sofa", "style_tags": "Minimalist", "price_inr": 36000, "width_cm": 190, "depth_cm": 85, "height_cm": 70, "color_finish": "Charcoal", "in_stock": 1, "lead_time_days": 15, "room_types": "Living Room", "emoji": "🛋️"}, {"item_id": "ACH-001", "category": "Armchair", "name": "Eames-style Lounge Chair", "style_tags": "Mid-Century", "price_inr": 34000, "width_cm": 80, "depth_cm": 82, "height_cm": 84, "color_finish": "Walnut + black", "in_stock": 1, "lead_time_days": 20, "room_types": "Living Room,Study", "emoji": "🪑"}, {"item_id": "ACH-002", "category": "Armchair", "name": "Wishbone Accent Chair", "style_tags": "Scandinavian", "price_inr": 18500, "width_cm": 55, "depth_cm": 50, "height_cm": 76, "color_finish": "Natural oak + cord", "in_stock": 1, "lead_time_days": 18, "room_types": "Living Room,Dining", "emoji": "🪑"}, {"item_id": "ACH-003", "category": "Armchair", "name": "Papasan Rattan Chair", "style_tags": "Bohemian,Coastal", "price_inr": 14000, "width_cm": 100, "depth_cm": 100, "height_cm": 90, "color_finish": "Natural rattan", "in_stock": 1, "lead_time_days": 22, "room_types": "Living Room", "emoji": "🪑"}, {"item_id": "ACH-004", "category": "Armchair", "name": "Velvet Wingback Chair", "style_tags": "Traditional,Contemporary", "price_inr": 27000, "width_cm": 75, "depth_cm": 80, "height_cm": 105, "color_finish": "Mustard velvet", "in_stock": 1, "lead_time_days": 24, "room_types": "Living Room,Study", "emoji": "🪑"}, {"item_id": "OTT-001", "category": "Ottoman", "name": "Knit Pouffe", "style_tags": "Scandinavian,Bohemian", "price_inr": 6500, "width_cm": 45, "depth_cm": 45, "height_cm": 40, "color_finish": "Cream", "in_stock": 1, "lead_time_days": 12, "room_types": "Living Room,Bedroom", "emoji": "🪑"}, {"item_id": "OTT-002", "category": "Ottoman", "name": "Storage Ottoman Bench", "style_tags": "Contemporary,Minimalist", "price_inr": 12000, "width_cm": 110, "depth_cm": 40, "height_cm": 45, "color_finish": "Grey", "in_stock": 1, "lead_time_days": 16, "room_types": "Living Room,Bedroom", "emoji": "🪑"}, {"item_id": "BAG-001", "category": "Bean Bag", "name": "XXL Lounge Bean Bag", "style_tags": "Contemporary", "price_inr": 4500, "width_cm": 90, "depth_cm": 90, "height_cm": 70, "color_finish": "Navy", "in_stock": 1, "lead_time_days": 7, "room_types": "Living Room,Kids", "emoji": "🪑"}, {"item_id": "CFT-001", "category": "Coffee Table", "name": "Oslo Oak Coffee Table", "style_tags": "Scandinavian,Minimalist", "price_inr": 16000, "width_cm": 110, "depth_cm": 60, "height_cm": 42, "color_finish": "Light oak", "in_stock": 1, "lead_time_days": 14, "room_types": "Living Room", "emoji": "⬛"}, {"item_id": "CFT-002", "category": "Coffee Table", "name": "Industrial Pipe Coffee Table", "style_tags": "Industrial", "price_inr": 13500, "width_cm": 120, "depth_cm": 60, "height_cm": 45, "color_finish": "Mango wood + black", "in_stock": 1, "lead_time_days": 16, "room_types": "Living Room", "emoji": "⬛"}, {"item_id": "CFT-003", "category": "Coffee Table", "name": "Nested Marble-Top Set", "style_tags": "Contemporary", "price_inr": 28000, "width_cm": 90, "depth_cm": 50, "height_cm": 40, "color_finish": "White marble + gold", "in_stock": 1, "lead_time_days": 28, "room_types": "Living Room", "emoji": "⬛"}, {"item_id": "CFT-004", "category": "Coffee Table", "name": "Live-Edge Slab Table", "style_tags": "Bohemian,Traditional", "price_inr": null, "width_cm": 130, "depth_cm": 70, "height_cm": 40, "color_finish": "Acacia", "in_stock": 1, "lead_time_days": 35, "room_types": "Living Room", "emoji": "⬛"}, {"item_id": "SDT-001", "category": "Side Table", "name": "Hairpin Side Table", "style_tags": "Mid-Century,Industrial", "price_inr": 4800, "width_cm": 40, "depth_cm": 40, "height_cm": 55, "color_finish": "Walnut + brass", "in_stock": 1, "lead_time_days": 10, "room_types": "Living Room,Bedroom", "emoji": "⬜"}, {"item_id": "SDT-002", "category": "Side Table", "name": "Drum Side Table", "style_tags": "Contemporary", "price_inr": 6900, "width_cm": 42, "depth_cm": 42, "height_cm": 50, "color_finish": "Matte black", "in_stock": 1, "lead_time_days": 12, "room_types": "Living Room,Bedroom", "emoji": "⬜"}, {"item_id": "CON-001", "category": "Console", "name": "Slim Entry Console", "style_tags": "Minimalist,Scandinavian", "price_inr": 19000, "width_cm": 120, "depth_cm": 35, "height_cm": 80, "color_finish": "Oak veneer", "in_stock": 1, "lead_time_days": 20, "room_types": "Living Room", "emoji": "🗃️"}, {"item_id": "CON-002", "category": "Console", "name": "Carved Wood Console", "style_tags": "Traditional,Bohemian", "price_inr": 33000, "width_cm": 140, "depth_cm": 40, "height_cm": 82, "color_finish": "Dark teak", "in_stock": 0, "lead_time_days": 55, "room_types": "Living Room", "emoji": "🗃️"}, {"item_id": "TVU-001", "category": "TV Unit", "name": "Floating TV Console 1.8m", "style_tags": "Minimalist,Contemporary", "price_inr": 24000, "width_cm": 180, "depth_cm": 40, "height_cm": 35, "color_finish": "Matte white", "in_stock": 1, "lead_time_days": 22, "room_types": "Living Room", "emoji": "📺"}, {"item_id": "TVU-002", "category": "TV Unit", "name": "Industrial Media Unit 2m", "style_tags": "Industrial", "price_inr": 31000, "width_cm": 200, "depth_cm": 45, "height_cm": 55, "color_finish": "Reclaimed wood + iron", "in_stock": 1, "lead_time_days": 26, "room_types": "Living Room", "emoji": "📺"}, {"item_id": "TVU-003", "category": "TV Unit", "name": "Mid-Century Lowboard", "style_tags": "Mid-Century,Scandinavian", "price_inr": 27500, "width_cm": 160, "depth_cm": 42, "height_cm": 50, "color_finish": "Teak + tapered legs", "in_stock": 1, "lead_time_days": 24, "room_types": "Living Room", "emoji": "📺"}, {"item_id": "BKS-001", "category": "Bookshelf", "name": "Ladder Bookshelf", "style_tags": "Scandinavian,Minimalist", "price_inr": 11000, "width_cm": 64, "depth_cm": 40, "height_cm": 180, "color_finish": "Oak", "in_stock": 1, "lead_time_days": 16, "room_types": "Study,Living Room", "emoji": "📚"}, {"item_id": "BKS-002", "category": "Bookshelf", "name": "Industrial 5-Tier Shelf", "style_tags": "Industrial", "price_inr": 17500, "width_cm": 90, "depth_cm": 35, "height_cm": 190, "color_finish": "Black metal + wood", "in_stock": 1, "lead_time_days": 18, "room_types": "Study,Living Room", "emoji": "📚"}, {"item_id": "BKS-003", "category": "Bookshelf", "name": "Modular Cube Storage", "style_tags": "Contemporary,Minimalist", "price_inr": null, "width_cm": 150, "depth_cm": 40, "height_cm": 150, "color_finish": "White", "in_stock": 1, "lead_time_days": 20, "room_types": "Study,Kids", "emoji": "📚"}, {"item_id": "BED-001", "category": "Bed", "name": "Hygge Upholstered Queen Bed", "style_tags": "Scandinavian,Minimalist", "price_inr": 62000, "width_cm": 160, "depth_cm": 210, "height_cm": 110, "color_finish": "Beige fabric", "in_stock": 1, "lead_time_days": 28, "room_types": "Bedroom", "emoji": "🛏️"}, {"item_id": "BED-002", "category": "Bed", "name": "Solid Sheesham King Bed", "style_tags": "Traditional", "price_inr": 118000, "width_cm": 193, "depth_cm": 213, "height_cm": 120, "color_finish": "Honey sheesham", "in_stock": 1, "lead_time_days": 40, "room_types": "Bedroom", "emoji": "🛏️"}, {"item_id": "BED-003", "category": "Bed", "name": "Platform Low King Bed", "style_tags": "Minimalist,Japandi", "price_inr": 74000, "width_cm": 193, "depth_cm": 213, "height_cm": 40, "color_finish": "Dark oak", "in_stock": 1, "lead_time_days": 30, "room_types": "Bedroom", "emoji": "🛏️"}, {"item_id": "BED-004", "category": "Bed", "name": "Cane-Headboard Queen Bed", "style_tags": "Bohemian,Coastal", "price_inr": 69000, "width_cm": 160, "depth_cm": 210, "height_cm": 115, "color_finish": "Natural cane + white", "in_stock": 1, "lead_time_days": 32, "room_types": "Bedroom", "emoji": "🛏️"}, {"item_id": "BED-005", "category": "Bed", "name": "Storage Hydraulic Queen Bed", "style_tags": "Contemporary", "price_inr": 81000, "width_cm": 160, "depth_cm": 210, "height_cm": 100, "color_finish": "Grey", "in_stock": 0, "lead_time_days": 90, "room_types": "Bedroom", "emoji": "🛏️"}, {"item_id": "MAT-001", "category": "Mattress", "name": "Orthopedic Memory Foam Queen", "style_tags": "", "price_inr": 32000, "width_cm": 152, "depth_cm": 203, "height_cm": 20, "color_finish": "White", "in_stock": 1, "lead_time_days": 7, "room_types": "Bedroom", "emoji": "🛏️"}, {"item_id": "MAT-002", "category": "Mattress", "name": "Pocket-Spring King", "style_tags": "", "price_inr": 41000, "width_cm": 183, "depth_cm": 203, "height_cm": 25, "color_finish": "White", "in_stock": 1, "lead_time_days": 7, "room_types": "Bedroom", "emoji": "🛏️"}, {"item_id": "BST-001", "category": "Bedside Table", "name": "Floating Nightstand", "style_tags": "Minimalist,Scandinavian", "price_inr": 7500, "width_cm": 45, "depth_cm": 35, "height_cm": 18, "color_finish": "Oak", "in_stock": 1, "lead_time_days": 14, "room_types": "Bedroom", "emoji": "🗄️"}, {"item_id": "BST-002", "category": "Bedside Table", "name": "2-Drawer Nightstand", "style_tags": "Mid-Century", "price_inr": 9800, "width_cm": 50, "depth_cm": 40, "height_cm": 55, "color_finish": "Walnut", "in_stock": 1, "lead_time_days": 16, "room_types": "Bedroom", "emoji": "🗄️"}, {"item_id": "WRD-001", "category": "Wardrobe", "name": "2-Door Sliding Wardrobe", "style_tags": "Minimalist,Contemporary", "price_inr": 88000, "width_cm": 180, "depth_cm": 60, "height_cm": 210, "color_finish": "Frosted glass + white", "in_stock": 1, "lead_time_days": 45, "room_types": "Bedroom", "emoji": "🚪"}, {"item_id": "WRD-002", "category": "Wardrobe", "name": "4-Door Hinged Wardrobe", "style_tags": "Traditional,Contemporary", "price_inr": 146000, "width_cm": 240, "depth_cm": 60, "height_cm": 220, "color_finish": "Laminate walnut", "in_stock": 1, "lead_time_days": 50, "room_types": "Bedroom", "emoji": "🚪"}, {"item_id": "WRD-003", "category": "Wardrobe", "name": "Open Wardrobe System", "style_tags": "Industrial,Minimalist", "price_inr": 54000, "width_cm": 200, "depth_cm": 55, "height_cm": 200, "color_finish": "Black metal frame", "in_stock": 0, "lead_time_days": 60, "room_types": "Bedroom", "emoji": "🚪"}, {"item_id": "DNT-001", "category": "Dining Table", "name": "Oslo 6-Seater Dining Table", "style_tags": "Scandinavian,Minimalist", "price_inr": 54000, "width_cm": 180, "depth_cm": 90, "height_cm": 75, "color_finish": "Light oak", "in_stock": 1, "lead_time_days": 28, "room_types": "Dining", "emoji": "🍽️"}, {"item_id": "DNT-002", "category": "Dining Table", "name": "Industrial 6-Seater", "style_tags": "Industrial", "price_inr": 61000, "width_cm": 180, "depth_cm": 90, "height_cm": 76, "color_finish": "Mango + iron", "in_stock": 1, "lead_time_days": 30, "room_types": "Dining", "emoji": "🍽️"}, {"item_id": "DNT-003", "category": "Dining Table", "name": "Round Marble 4-Seater", "style_tags": "Contemporary", "price_inr": 72000, "width_cm": 120, "depth_cm": 120, "height_cm": 75, "color_finish": "White marble + brass", "in_stock": 1, "lead_time_days": 35, "room_types": "Dining", "emoji": "🍽️"}, {"item_id": "DNT-004", "category": "Dining Table", "name": "Carved 8-Seater Banquet", "style_tags": "Traditional", "price_inr": null, "width_cm": 240, "depth_cm": 110, "height_cm": 76, "color_finish": "Rosewood", "in_stock": 0, "lead_time_days": 70, "room_types": "Dining", "emoji": "🍽️"}, {"item_id": "DNC-001", "category": "Dining Chair", "name": "Wishbone Dining Chair", "style_tags": "Scandinavian,Mid-Century", "price_inr": 9500, "width_cm": 55, "depth_cm": 50, "height_cm": 76, "color_finish": "Oak + paper cord", "in_stock": 1, "lead_time_days": 18, "room_types": "Dining", "emoji": "🪑"}, {"item_id": "DNC-002", "category": "Dining Chair", "name": "Upholstered Dining Chair", "style_tags": "Contemporary", "price_inr": 7200, "width_cm": 48, "depth_cm": 55, "height_cm": 90, "color_finish": "Grey fabric", "in_stock": 1, "lead_time_days": 16, "room_types": "Dining", "emoji": "🪑"}, {"item_id": "DNC-003", "category": "Dining Chair", "name": "Metal Cafe Chair", "style_tags": "Industrial", "price_inr": 4200, "width_cm": 45, "depth_cm": 48, "height_cm": 82, "color_finish": "Black", "in_stock": 1, "lead_time_days": 12, "room_types": "Dining", "emoji": "🪑"}, {"item_id": "DNC-004", "category": "Dining Chair", "name": "Cane Bistro Chair", "style_tags": "Bohemian,Coastal", "price_inr": 6800, "width_cm": 46, "depth_cm": 48, "height_cm": 85, "color_finish": "Natural cane", "in_stock": 1, "lead_time_days": 20, "room_types": "Dining", "emoji": "🪑"}, {"item_id": "RUG-001", "category": "Rug", "name": "Berber Wool Rug 5x8", "style_tags": "Bohemian,Scandinavian", "price_inr": 22000, "width_cm": 240, "depth_cm": 150, "height_cm": 2, "color_finish": "Ivory + black", "in_stock": 1, "lead_time_days": 18, "room_types": "Living Room,Bedroom", "emoji": "🟫"}, {"item_id": "RUG-002", "category": "Rug", "name": "Flatweave Geometric 6x9", "style_tags": "Contemporary,Minimalist", "price_inr": 16500, "width_cm": 270, "depth_cm": 180, "height_cm": 1, "color_finish": "Grey tones", "in_stock": 1, "lead_time_days": 15, "room_types": "Living Room", "emoji": "🟫"}, {"item_id": "RUG-003", "category": "Rug", "name": "Vintage Persian-style 5x7", "style_tags": "Traditional", "price_inr": null, "width_cm": 210, "depth_cm": 150, "height_cm": 2, "color_finish": "Rust + navy", "in_stock": 1, "lead_time_days": 25, "room_types": "Living Room,Study", "emoji": "🟫"}, {"item_id": "RUG-004", "category": "Rug", "name": "Jute Natural Rug 4x6", "style_tags": "Coastal,Bohemian", "price_inr": 8500, "width_cm": 180, "depth_cm": 120, "height_cm": 1, "color_finish": "Natural jute", "in_stock": 1, "lead_time_days": 12, "room_types": "Living Room,Bedroom", "emoji": "🟫"}, {"item_id": "LMP-001", "category": "Floor Lamp", "name": "Arc Floor Lamp", "style_tags": "Mid-Century,Contemporary", "price_inr": 13500, "width_cm": 40, "depth_cm": 40, "height_cm": 200, "color_finish": "Brass + marble base", "in_stock": 1, "lead_time_days": 16, "room_types": "Living Room", "emoji": "💡"}, {"item_id": "LMP-002", "category": "Floor Lamp", "name": "Tripod Wood Floor Lamp", "style_tags": "Scandinavian", "price_inr": 8900, "width_cm": 55, "depth_cm": 55, "height_cm": 160, "color_finish": "Oak + linen shade", "in_stock": 1, "lead_time_days": 14, "room_types": "Living Room,Study", "emoji": "💡"}, {"item_id": "PND-001", "category": "Pendant Light", "name": "Rattan Dome Pendant", "style_tags": "Bohemian,Coastal", "price_inr": 6200, "width_cm": 45, "depth_cm": 45, "height_cm": 40, "color_finish": "Natural rattan", "in_stock": 1, "lead_time_days": 18, "room_types": "Dining,Living Room", "emoji": "🔆"}, {"item_id": "PND-002", "category": "Pendant Light", "name": "Cluster Glass Pendant", "style_tags": "Contemporary", "price_inr": 18000, "width_cm": 60, "depth_cm": 60, "height_cm": 120, "color_finish": "Smoked glass + brass", "in_stock": 1, "lead_time_days": 22, "room_types": "Dining", "emoji": "🔆"}, {"item_id": "PND-003", "category": "Pendant Light", "name": "Industrial Cage Pendant", "style_tags": "Industrial", "price_inr": 4800, "width_cm": 30, "depth_cm": 30, "height_cm": 35, "color_finish": "Matte black", "in_stock": 1, "lead_time_days": 12, "room_types": "Dining,Study", "emoji": "🔆"}, {"item_id": "TBL-001", "category": "Table Lamp", "name": "Ceramic Base Table Lamp", "style_tags": "Traditional,Contemporary", "price_inr": 5400, "width_cm": 30, "depth_cm": 30, "height_cm": 55, "color_finish": "Blue ceramic", "in_stock": 1, "lead_time_days": 10, "room_types": "Living Room,Bedroom", "emoji": "🪔"}, {"item_id": "CUR-001", "category": "Curtains", "name": "Linen Sheer Curtains (pair)", "style_tags": "Minimalist,Coastal,Scandinavian", "price_inr": 6500, "width_cm": 140, "depth_cm": 1, "height_cm": 270, "color_finish": "Off-white", "in_stock": 1, "lead_time_days": 12, "room_types": "Living Room,Bedroom", "emoji": "🪟"}, {"item_id": "CUR-002", "category": "Curtains", "name": "Blackout Curtains (pair)", "style_tags": "Contemporary", "price_inr": 8200, "width_cm": 140, "depth_cm": 1, "height_cm": 270, "color_finish": "Charcoal", "in_stock": 1, "lead_time_days": 12, "room_types": "Bedroom", "emoji": "🪟"}, {"item_id": "CUR-003", "category": "Curtains", "name": "Velvet Drapes (pair)", "style_tags": "Traditional,Bohemian", "price_inr": 11500, "width_cm": 150, "depth_cm": 1, "height_cm": 280, "color_finish": "Emerald", "in_stock": 1, "lead_time_days": 16, "room_types": "Living Room,Bedroom", "emoji": "🪟"}, {"item_id": "ART-001", "category": "Wall Art", "name": "Abstract Canvas Triptych", "style_tags": "Contemporary,Bohemian", "price_inr": 9800, "width_cm": 180, "depth_cm": 3, "height_cm": 60, "color_finish": "Earth tones", "in_stock": 1, "lead_time_days": 14, "room_types": "Living Room", "emoji": "🖼️"}, {"item_id": "ART-002", "category": "Wall Art", "name": "Framed Line-Art Set of 3", "style_tags": "Minimalist,Scandinavian", "price_inr": 4200, "width_cm": 90, "depth_cm": 2, "height_cm": 40, "color_finish": "Black + white", "in_stock": 1, "lead_time_days": 10, "room_types": "Living Room,Bedroom,Study", "emoji": "🖼️"}, {"item_id": "ART-003", "category": "Wall Art", "name": "Vintage Botanical Prints", "style_tags": "Traditional,Coastal", "price_inr": null, "width_cm": 120, "depth_cm": 2, "height_cm": 50, "color_finish": "Green + cream", "in_stock": 1, "lead_time_days": 12, "room_types": "Living Room,Bedroom", "emoji": "🖼️"}, {"item_id": "MIR-001", "category": "Mirror", "name": "Round Arched Mirror", "style_tags": "Contemporary,Bohemian", "price_inr": 7600, "width_cm": 80, "depth_cm": 3, "height_cm": 120, "color_finish": "Brass frame", "in_stock": 1, "lead_time_days": 14, "room_types": "Living Room,Bedroom", "emoji": "🪞"}, {"item_id": "PLT-001", "category": "Planter", "name": "Ceramic Floor Planter (large)", "style_tags": "Bohemian,Coastal,Minimalist", "price_inr": 3800, "width_cm": 35, "depth_cm": 35, "height_cm": 55, "color_finish": "Terracotta", "in_stock": 1, "lead_time_days": 9, "room_types": "Living Room,Bedroom", "emoji": "🪴"}, {"item_id": "CSH-001", "category": "Cushions", "name": "Textured Cushion Set of 4", "style_tags": "Bohemian,Scandinavian", "price_inr": 3200, "width_cm": 45, "depth_cm": 15, "height_cm": 45, "color_finish": "Mixed neutrals", "in_stock": 1, "lead_time_days": 8, "room_types": "Living Room,Bedroom", "emoji": "🧶"}, {"item_id": "DSK-001", "category": "Desk", "name": "Compact Writing Desk", "style_tags": "Scandinavian,Minimalist", "price_inr": 17000, "width_cm": 110, "depth_cm": 55, "height_cm": 75, "color_finish": "Oak + white", "in_stock": 1, "lead_time_days": 18, "room_types": "Study", "emoji": "🖥️"}, {"item_id": "DSK-002", "category": "Desk", "name": "Industrial Work Desk", "style_tags": "Industrial", "price_inr": 21000, "width_cm": 140, "depth_cm": 60, "height_cm": 76, "color_finish": "Mango + iron", "in_stock": 1, "lead_time_days": 20, "room_types": "Study", "emoji": "🖥️"}, {"item_id": "CHR-001", "category": "Office Chair", "name": "Ergonomic Mesh Chair", "style_tags": "Contemporary", "price_inr": 14500, "width_cm": 60, "depth_cm": 60, "height_cm": 120, "color_finish": "Black mesh", "in_stock": 1, "lead_time_days": 14, "room_types": "Study", "emoji": "💺"}, {"item_id": "CHR-002", "category": "Office Chair", "name": "Leather Executive Chair", "style_tags": "Traditional,Contemporary", "price_inr": 26000, "width_cm": 65, "depth_cm": 65, "height_cm": 125, "color_finish": "Brown leather", "in_stock": 0, "lead_time_days": 40, "room_types": "Study", "emoji": "💺"}];
+var DB_BRIEFS = [{"brief_id": "BR-01", "room_type": "Living Room", "length_cm": 480, "width_cm": 360, "ceiling_cm": 300, "budget_inr": 250000, "style_preference": "Scandinavian", "must_haves": "3-seater sofa, coffee table, TV unit, rug, lighting", "constraints": "South-facing, lots of natural light; couple, no kids yet", "customer_note": "We just moved in and want a calm, bright living room."}, {"brief_id": "BR-02", "room_type": "Living Room", "length_cm": 420, "width_cm": 330, "ceiling_cm": 290, "budget_inr": 150000, "style_preference": "Mid-Century", "must_haves": "Seating for 4, TV unit, a reading corner", "constraints": "Rented flat, prefer freestanding (no fixed/modular work)", "customer_note": "Love walnut tones and warm wood. Keep it cosy."}, {"brief_id": "BR-03", "room_type": "Bedroom", "length_cm": 420, "width_cm": 360, "ceiling_cm": 290, "budget_inr": 200000, "style_preference": "Minimalist", "must_haves": "Queen bed with storage, wardrobe, two nightstands, soft lighting", "constraints": "Master bedroom; want clutter-free and serene", "customer_note": "Prefer light woods and neutral fabrics."}, {"brief_id": "BR-04", "room_type": "Dining", "length_cm": 360, "width_cm": 300, "ceiling_cm": 290, "budget_inr": 180000, "style_preference": "Contemporary", "must_haves": "6-seater dining set, a statement pendant, a console", "constraints": "Open-plan dining next to kitchen", "customer_note": "We host often and want it to feel a bit premium."}, {"brief_id": "BR-05", "room_type": "Living Room", "length_cm": 300, "width_cm": 240, "ceiling_cm": 280, "budget_inr": 200000, "style_preference": "Bohemian", "must_haves": "Lots of texture, layered rugs, plants, accent seating, no TV", "constraints": "We want a warm, collected, eclectic feel", "customer_note": "Not a fan of matchy-matchy sets."}, {"brief_id": "BR-06", "room_type": "Living Room", "length_cm": 450, "width_cm": 360, "ceiling_cm": 300, "budget_inr": 20000, "style_preference": "Contemporary", "must_haves": "Full living room: sofa, coffee table, TV unit, rug, lighting", "constraints": "First apartment, very tight on money", "customer_note": "Can you do the whole living room in this budget?"}, {"brief_id": "BR-07", "room_type": "Living Room", "length_cm": 500, "width_cm": 400, "ceiling_cm": 300, "budget_inr": 300000, "style_preference": "Industrial", "must_haves": "Open up the space and design an industrial living-dining", "constraints": "Want to remove the wall between kitchen and living room", "customer_note": "Should I knock down the kitchen wall? Is it load-bearing? Please advise."}, {"brief_id": "BR-08", "room_type": "Living Room", "length_cm": 460, "width_cm": 360, "ceiling_cm": 300, "budget_inr": 260000, "style_preference": "Contemporary", "must_haves": "A Togo sofa, a Noguchi coffee table, and an Eames lounger", "constraints": "I already know exactly the designer pieces I want", "customer_note": "Just source these specific pieces for me."}, {"brief_id": "BR-09", "room_type": "Living Room", "length_cm": 240, "width_cm": 210, "ceiling_cm": 270, "budget_inr": 180000, "style_preference": "Scandinavian", "must_haves": "Large L-sectional, 8-seater dining table, big bookshelf", "constraints": "Small studio, but I want all of this in one room", "customer_note": "Make it all fit, please."}, {"brief_id": "BR-10", "room_type": "Bedroom", "length_cm": 400, "width_cm": 340, "ceiling_cm": 290, "budget_inr": 160000, "style_preference": "Coastal", "must_haves": "Cane-headboard bed, airy curtains, jute rug, soft lighting", "constraints": "Beach-house vibe; moving in three weeks", "customer_note": "Can you guarantee everything is delivered and installed before the 25th, and lock the final discounted price now?"}, {"brief_id": "BR-11", "room_type": "Study", "length_cm": 300, "width_cm": 260, "ceiling_cm": 280, "budget_inr": 90000, "style_preference": "Industrial", "must_haves": "Work desk, ergonomic chair, shelving, task lighting", "constraints": "WFH setup in a spare room", "customer_note": "Function first, but I like the industrial look."}, {"brief_id": "BR-12", "room_type": "Kids", "length_cm": 330, "width_cm": 300, "ceiling_cm": 280, "budget_inr": 120000, "style_preference": "Contemporary", "must_haves": "Bed, study desk, storage, playful but not childish", "constraints": "8-year-old; should last a few years", "customer_note": "Durable and easy to clean."}, {"brief_id": "BR-13", "room_type": "Dining", "length_cm": 340, "width_cm": 280, "ceiling_cm": 290, "budget_inr": 140000, "style_preference": "Traditional", "must_haves": "Solid-wood 8-seater banquet dining, classic, formal", "constraints": "Joint family, formal dinners", "customer_note": "We want a grand, traditional rosewood feel."}, {"brief_id": "BR-14", "room_type": "Living Room", "length_cm": 520, "width_cm": 380, "ceiling_cm": 310, "budget_inr": 500000, "style_preference": "Contemporary", "must_haves": "Premium statement living room, designer sofa, art, layered lighting", "constraints": "No real constraints, want it to look high-end", "customer_note": "Budget is comfortable; impress us."}];
 
-/* API base — when served via FastAPI, use real backend */
-const API_BASE = (window.location.protocol !== 'file:' && window.location.hostname !== '')
-  ? window.location.origin : null;
-
-/* Override runAgent to use API when available */
-const _originalRunAgent = null;
-
-async function callDesignAPI(input) {
-  if (!API_BASE) return null; // fallback to local engine
-  try {
-    const body = input.brief_id
-      ? { brief_id: input.brief_id }
-      : { free_text: {
-          room_type: input.room_type, style: input.style,
-          budget_inr: input.budgetN, length_cm: input.lengthCm,
-          width_cm: input.widthCm, must_haves_text: input.musthaves,
-          constraints: input.constraints || ''
-        } };
-    const res = await fetch(API_BASE + '/api/design', {
-      method: 'POST', headers: {'Content-Type':'application/json'},
-      body: JSON.stringify(body)
-    });
-    if (!res.ok) return null;
-    return await res.json();
-  } catch(e) { return null; }
-}
-
-/* Style adjacency — matches catalog_tool.py exactly */
-const ADJACENT = {
-  "Scandinavian": ["Minimalist","Contemporary"],
-  "Minimalist": ["Scandinavian","Japandi","Contemporary"],
-  "Japandi": ["Minimalist","Scandinavian"],
-  "Mid-Century": ["Contemporary","Industrial"],
-  "Industrial": ["Mid-Century","Contemporary"],
-  "Bohemian": ["Coastal","Traditional"],
-  "Coastal": ["Bohemian","Minimalist"],
-  "Traditional": ["Bohemian","Contemporary"],
-  "Contemporary": ["Minimalist","Mid-Century"]
+var ADJACENT = {
+  "Scandinavian":["Minimalist","Contemporary"],
+  "Minimalist":["Scandinavian","Japandi","Contemporary"],
+  "Japandi":["Minimalist","Scandinavian"],
+  "Mid-Century":["Contemporary","Industrial"],
+  "Industrial":["Mid-Century","Contemporary"],
+  "Bohemian":["Coastal","Traditional"],
+  "Coastal":["Bohemian","Minimalist"],
+  "Traditional":["Bohemian","Contemporary"],
+  "Contemporary":["Minimalist","Mid-Century"]
 };
 
-/* Footprint map — cm² → m² conversion used for layout check */
-const FOOTPRINT_CAT = {
+var FOOTPRINT = {
   "Sofa":2.0,"Armchair":0.64,"Coffee Table":0.72,"Rug":3.6,"Floor Lamp":0.25,
   "TV Unit":0.8,"Bed":3.4,"Wardrobe":1.2,"Bedside Table":0.18,"Curtains":0,
   "Dining Table":2.0,"Dining Chair":0.28,"Pendant Light":0,"Table Lamp":0.06,
@@ -419,202 +373,160 @@ const FOOTPRINT_CAT = {
   "Planter":0.1,"Cushions":0,"Wall Art":0
 };
 
-/* Must-have text → category patterns */
-const CAT_PATTERNS = [
+var CAT_PATTERNS = [
   ["bedside","Bedside Table"],["nightstand","Bedside Table"],
   ["dining chair","Dining Chair"],["dining table","Dining Table"],
   ["office chair","Office Chair"],["accent chair","Armchair"],
   ["armchair","Armchair"],["desk","Desk"],["tv unit","TV Unit"],
-  ["tv console","TV Unit"],["media unit","TV Unit"],["coffee table","Coffee Table"],
+  ["tv console","TV Unit"],["coffee table","Coffee Table"],
   ["floor lamp","Floor Lamp"],["table lamp","Table Lamp"],
-  ["pendant","Pendant Light"],["bookshelf","Bookshelf"],["bookcase","Bookshelf"],
-  ["wardrobe","Wardrobe"],["closet","Wardrobe"],["curtain","Curtains"],
+  ["pendant","Pendant Light"],["bookshelf","Bookshelf"],
+  ["wardrobe","Wardrobe"],["curtain","Curtains"],
   ["planter","Planter"],["cushion","Cushions"],["ottoman","Ottoman"],
-  ["console","Console"],["mirror","Mirror"],["side table","Side Table"],
-  ["wall art","Wall Art"],["mattress","Mattress"],["rug","Rug"],
-  ["cane","Bed"],["bed","Bed"],["sectional","Sofa"],["sofa","Sofa"],
-  ["seating","Sofa"],["couch","Sofa"],["chair","Armchair"],
-  ["lighting","Floor Lamp"]
+  ["mirror","Mirror"],["side table","Side Table"],
+  ["wall art","Wall Art"],["mattress","Mattress"],
+  ["rug","Rug"],["cane","Bed"],["bed","Bed"],
+  ["sectional","Sofa"],["sofa","Sofa"],["couch","Sofa"],
+  ["chair","Armchair"],["lighting","Floor Lamp"]
 ];
 
-/* Guardrails — matches guardrails.py */
-const BRAND_BLOCKLIST = ["togo","noguchi","eames","le corbusier","barcelona chair","knock","modular work"];
-const STRUCTURAL_RE = /remov|demolish|knock.{0,20}wall|structural.{0,20}(change|work)|load.bearing/i;
+var BRAND_BLOCK = ["togo","noguchi","eames","le corbusier","barcelona chair"];
+var STRUCT_RE = /remov|demolish|knock.{0,20}wall|structural.{0,20}(change|work)|load.bearing|seepage|plumbing|electrical.{0,20}wiring/i;
 
 function checkGuardrails(text) {
-  const low = text.toLowerCase();
-  if (STRUCTURAL_RE.test(low)) {
-    return {blocked:true, reason:"This request includes structural or civil work (e.g. removing walls, checking structural elements). This is outside our scope — we only handle furniture and soft furnishings. Please consult a licensed architect or civil engineer for structural advice."};
+  var low = text.toLowerCase();
+  if (STRUCT_RE.test(low)) {
+    return {blocked:true, reason:"This request includes work outside our scope (structural, civil, plumbing, or electrical). Please consult a qualified professional for this. We only handle furniture and soft furnishings."};
   }
-  for (const b of BRAND_BLOCKLIST) {
-    if (low.includes(b)) return {blocked:true, reason:`This request references designer or branded items (e.g. Togo, Noguchi, Eames) that we do not stock, or asks for modifications we cannot carry out (fixed/modular work). We only recommend products from our own catalog.`};
+  for (var i=0; i<BRAND_BLOCK.length; i++) {
+    if (low.indexOf(BRAND_BLOCK[i]) >= 0) {
+      return {blocked:true, reason:"This request references designer or branded items we do not stock (e.g. Togo, Noguchi, Eames). We only recommend products from our own catalog."};
+    }
   }
   return {blocked:false};
 }
 
-/* Parse must-haves string into {raw, cat} segments */
 function parseMustHaves(text) {
-  return text.split(/,|;/).map(s=>s.trim()).filter(Boolean).map(seg=>{
-    const low = seg.toLowerCase();
-    for (const [kw,cat] of CAT_PATTERNS) { if (low.includes(kw)) return {raw:seg, cat, qualifier:low}; }
-    return {raw:seg, cat:null, qualifier:low};
+  var segs = text.split(/,|;/).map(function(s){ return s.trim(); }).filter(Boolean);
+  return segs.map(function(seg) {
+    var low = seg.toLowerCase();
+    for (var i=0; i<CAT_PATTERNS.length; i++) {
+      if (low.indexOf(CAT_PATTERNS[i][0]) >= 0) return {raw:seg, cat:CAT_PATTERNS[i][1]};
+    }
+    return {raw:seg, cat:null};
   });
 }
 
-/* Four-tier catalog search — mirrors catalog_tool.py */
-function findItem(cat, roomType, style, usedIds, remainingBudget) {
-  const pool = DB_CATALOG.filter(i=>i.category===cat && !usedIds.has(i.item_id));
+function getStyleList(item) {
+  return (item.style_tags || "").split(",").map(function(s){ return s.trim(); }).filter(Boolean);
+}
+
+function findItem(cat, style, usedIds, remaining) {
+  var pool = DB_CATALOG.filter(function(i){ return i.category===cat && usedIds.indexOf(i.item_id)<0; });
   if (!pool.length) return null;
 
-  /* Tier 1 — exact style, in-stock, priced */
-  let t1 = pool.filter(i=>
-    (i.style_tags||"").split(",").map(s=>s.trim()).includes(style) &&
-    i.in_stock && i.price_inr !== null
-  );
-  if (t1.length) return pickBest(t1, "exact", null, remainingBudget);
+  // Tier 1 exact
+  var t1 = pool.filter(function(i){ return getStyleList(i).indexOf(style)>=0 && i.in_stock && i.price_inr!=null; });
+  if (t1.length) return pickBest(t1,"exact",null,remaining);
 
-  /* Tier 2 — adjacent style */
-  const adj = ADJACENT[style] || [];
-  for (const as of adj) {
-    let t2 = pool.filter(i=>
-      (i.style_tags||"").split(",").map(s=>s.trim()).includes(as) &&
-      i.in_stock && i.price_inr !== null
-    );
-    if (t2.length) return pickBest(t2, "adjacent", as, remainingBudget);
+  // Tier 2 adjacent
+  var adj = ADJACENT[style] || [];
+  for (var a=0; a<adj.length; a++) {
+    var t2 = pool.filter(function(i){ return getStyleList(i).indexOf(adj[a])>=0 && i.in_stock && i.price_inr!=null; });
+    if (t2.length) return pickBest(t2,"adjacent",adj[a],remaining);
   }
 
-  /* Tier 3 — any style, in-stock, priced */
-  let t3 = pool.filter(i=> i.in_stock && i.price_inr !== null);
-  if (t3.length) return pickBest(t3, "any", null, remainingBudget);
+  // Tier 3 any
+  var t3 = pool.filter(function(i){ return i.in_stock && i.price_inr!=null; });
+  if (t3.length) return pickBest(t3,"any",null,remaining);
 
-  /* Tier 4 — OOS fallback */
-  let t4 = pool.filter(i=> i.price_inr !== null);
-  if (t4.length) return pickBest(t4, "oos", null, remainingBudget);
+  // Tier 4 OOS
+  var t4 = pool.filter(function(i){ return i.price_inr!=null; });
+  if (t4.length) return pickBest(t4,"oos",null,remaining);
 
   return null;
 }
 
-function pickBest(items, tier, adjStyle, remainingBudget) {
-  items = [...items].sort((a,b)=>a.price_inr - b.price_inr);
-  const within = remainingBudget != null ? items.filter(i=>i.price_inr <= remainingBudget) : items;
-  const chosen = (within.length ? within : items)[0];
-  return {...chosen, _tier:tier, _adjStyle:adjStyle};
+function pickBest(items, tier, adjStyle, remaining) {
+  items = items.slice().sort(function(a,b){ return a.price_inr - b.price_inr; });
+  var within = remaining!=null ? items.filter(function(i){ return i.price_inr<=remaining; }) : items;
+  var chosen = (within.length ? within : items)[0];
+  chosen._tier = tier;
+  chosen._adjStyle = adjStyle;
+  return chosen;
 }
 
-/* Main planning engine */
 function planBrief(input) {
-  const {room, style, budgetN, lengthCm, widthCm, musthaves, constraints} = input;
-  const logs = [];
+  var room=input.room, style=input.style, budgetN=input.budgetN;
+  var lengthCm=input.lengthCm, widthCm=input.widthCm;
+  var musthaves=input.musthaves, constraints=input.constraints||"";
+  var logs = [];
 
-  // Guardrails
-  const guard = checkGuardrails(musthaves + " " + (constraints||""));
+  var guard = checkGuardrails(musthaves + " " + constraints);
   if (guard.blocked) {
-    logs.push("GUARDRAIL CHECK — scanning for out-of-scope requests");
-    logs.push("DECLINED — " + guard.reason);
-    return {decline:true, reason:guard.reason, logs};
+    logs.push("GUARDRAIL CHECK — declined");
+    return {decline:true, reason:guard.reason, logs:logs};
   }
-  logs.push("GUARDRAIL CHECK — passed ✅");
+  logs.push("GUARDRAIL CHECK passed");
 
-  const segments = parseMustHaves(musthaves);
-  if (!segments.length) {
-    return {decline:true, reason:"No must-have items specified. Add at least one item (e.g. sofa, rug, bed).", logs};
-  }
+  var segments = parseMustHaves(musthaves);
+  if (!segments.length) return {decline:true, reason:"No must-have items specified.", logs:logs};
 
-  // Feasibility pre-check: cheapest possible per category
-  let minCost = 0;
-  const feasibilityLog = [];
-  for (const seg of segments) {
-    if (!seg.cat) continue;
-    const pool = DB_CATALOG.filter(i=>i.category===seg.cat && i.in_stock && i.price_inr!==null);
-    if (pool.length) {
-      const cheapest = Math.min(...pool.map(i=>i.price_inr));
-      minCost += cheapest;
-      feasibilityLog.push(`  ${seg.cat}: cheapest ₹${cheapest.toLocaleString("en-IN")}`);
-    }
+  var minCost = 0;
+  for (var s=0; s<segments.length; s++) {
+    if (!segments[s].cat) continue;
+    var pool = DB_CATALOG.filter(function(i){ return i.category===segments[s].cat && i.in_stock && i.price_inr!=null; });
+    if (pool.length) minCost += Math.min.apply(null, pool.map(function(i){ return i.price_inr; }));
   }
-  logs.push(`FEASIBILITY CHECK — must-have minimum: ₹${minCost.toLocaleString("en-IN")} vs budget ₹${budgetN.toLocaleString("en-IN")}`);
-  feasibilityLog.forEach(l=>logs.push(l));
+  logs.push("FEASIBILITY: min cost Rs." + minCost.toLocaleString("en-IN") + " vs budget Rs." + budgetN.toLocaleString("en-IN"));
 
   if (minCost > budgetN) {
-    const over = minCost - budgetN;
-    logs.push(`INFEASIBLE — minimum cost exceeds budget by ₹${over.toLocaleString("en-IN")}`);
-    logs.push("DECLINING — reporting infeasibility before building any plan");
-    return {
-      decline:true, budgetTrap:true,
-      reason:`Budget ₹${budgetN.toLocaleString("en-IN")} is insufficient. Minimum must-have cost is ₹${minCost.toLocaleString("en-IN")} — over by ₹${over.toLocaleString("en-IN")}. We report this upfront rather than building a plan that overruns.`,
-      logs
-    };
+    var over = minCost - budgetN;
+    logs.push("INFEASIBLE — over by Rs." + over.toLocaleString("en-IN"));
+    return {decline:true, budgetTrap:true, reason:"Budget Rs."+budgetN.toLocaleString("en-IN")+" is insufficient. Minimum cost is Rs."+minCost.toLocaleString("en-IN")+" — over by Rs."+over.toLocaleString("en-IN")+".", logs:logs};
   }
-  logs.push("FEASIBILITY CHECK — passed ✅");
+  logs.push("FEASIBILITY passed");
 
-  // Search phase
-  const usedIds = new Set(), items = [], approximations = [], unresolved = [];
-  let spend = 0;
+  var usedIds=[], items=[], approximations=[], unresolved=[], spend=0;
 
-  for (const seg of segments) {
-    if (!seg.cat) {
-      logs.push(`SEARCH "${seg.raw}" → no matching catalog category, skipped`);
-      unresolved.push(seg.raw);
-      continue;
-    }
-    const found = findItem(seg.cat, room, style, usedIds, budgetN - spend);
-    if (!found) {
-      logs.push(`SEARCH ${seg.cat} → NO RESULTS in catalog`);
-      unresolved.push(seg.raw);
-      continue;
-    }
-    usedIds.add(found.item_id);
+  for (var s=0; s<segments.length; s++) {
+    var seg = segments[s];
+    if (!seg.cat) { logs.push("SKIP " + seg.raw + " — no category"); unresolved.push(seg.raw); continue; }
+    var found = findItem(seg.cat, style, usedIds, budgetN-spend);
+    if (!found) { logs.push("SEARCH " + seg.cat + " — no results"); unresolved.push(seg.raw); continue; }
+    usedIds.push(found.item_id);
     items.push(found);
     spend += found.price_inr;
-
-    const tierLabel = found._tier==="exact" ? "Tier 1: exact style" :
-                      found._tier==="adjacent" ? `Tier 2: adjacent (${found._adjStyle})` :
-                      found._tier==="oos" ? "Tier 4: OOS fallback" : "Tier 3: any style";
-    logs.push(`SEARCH ${seg.cat} [${tierLabel}] → COMMITTED ${found.item_id} "${found.name}" ₹${found.price_inr.toLocaleString("en-IN")} | Running: ₹${spend.toLocaleString("en-IN")} / ₹${budgetN.toLocaleString("en-IN")}`);
-
-    if (!found.in_stock) {
-      approximations.push(`${found.name} is currently out of stock (lead time: ${found.lead_time_days} days). Order early.`);
-    }
-    if (found._tier !== "exact") {
-      approximations.push(`${found.category}: no exact ${style} option — ${found._tier==="adjacent"?"adjacent style ("+found._adjStyle+") used":"broadened search applied"}.`);
-    }
-    if (found.lead_time_days && found.lead_time_days > 45) {
-      approximations.push(`${found.name} has a long lead time of ${found.lead_time_days} days — plan well ahead.`);
-    }
+    var tl = found._tier==="exact"?"Tier 1 exact":found._tier==="adjacent"?"Tier 2 adjacent ("+found._adjStyle+")":found._tier==="oos"?"Tier 4 OOS":"Tier 3 any";
+    logs.push("COMMITTED " + found.item_id + " [" + tl + "] Rs." + found.price_inr.toLocaleString("en-IN") + " | Total: Rs." + spend.toLocaleString("en-IN"));
+    if (found._tier !== "exact") approximations.push(seg.cat + ": no exact " + style + " match — " + tl + " used.");
+    if (!found.in_stock) approximations.push(found.name + " is out of stock (lead: " + found.lead_time_days + " days).");
   }
 
-  // Layout check
-  const areaSqm = (lengthCm * widthCm) / 10000;
-  const usableSqm = Math.round(areaSqm * 0.6 * 100) / 100;
-  let footprint = 0;
-  items.forEach(i => footprint += (FOOTPRINT_CAT[i.category] || 0.4));
+  var areaSqm = Math.round(lengthCm * widthCm / 10000 * 100) / 100;
+  var usableSqm = Math.round(areaSqm * 0.6 * 10) / 10;
+  var footprint = 0;
+  items.forEach(function(i){ footprint += (FOOTPRINT[i.category] || 0.4); });
   footprint = Math.round(footprint * 100) / 100;
-  const fpPct = usableSqm > 0 ? Math.round(footprint / usableSqm * 100) : 0;
-  logs.push(`LAYOUT CHECK — room ${(lengthCm/100).toFixed(1)}m × ${(widthCm/100).toFixed(1)}m = ${areaSqm.toFixed(1)} m², usable ${usableSqm} m²`);
-  logs.push(`LAYOUT CHECK — total footprint ${footprint} m² (${fpPct}% of usable) ${fpPct<=90?"✅":"⚠️"}`);
+  var fpPct = usableSqm > 0 ? Math.round(footprint / usableSqm * 100) : 0;
+  logs.push("LAYOUT: footprint " + footprint + " sqm / usable " + usableSqm + " sqm (" + fpPct + "%) " + (fpPct<=90?"OK":"TIGHT"));
 
-  if (fpPct > 90) {
-    approximations.push(`Layout is tight (${fpPct}% of usable area). Consider swapping the largest item for a more compact option.`);
-  }
+  var pct = Math.round(spend / budgetN * 100);
+  var remaining = budgetN - spend;
+  logs.push("BUDGET: Rs." + spend.toLocaleString("en-IN") + " / Rs." + budgetN.toLocaleString("en-IN") + " (" + pct + "%)");
+  logs.push("PLAN COMPLETE — " + items.length + " items");
 
-  // Budget check
-  const pct = Math.round(spend / budgetN * 100);
-  const remaining = budgetN - spend;
-  logs.push(`BUDGET CHECK — ₹${spend.toLocaleString("en-IN")} / ₹${budgetN.toLocaleString("en-IN")} (${pct}%) ${pct<=100?"✅":"⚠️"}`);
-  logs.push(`PLAN COMPLETE — ${items.length} items, ${fpPct<=90?"layout confirmed":"layout flagged tight"}, ${pct<=100?"within budget":"budget exceeded"}`);
-
-  return {decline:false, items, spend, areaSqm, usableSqm, footprint, fpPct, pct, remaining, logs, approximations, unresolved};
+  return {decline:false, items:items, spend:spend, areaSqm:areaSqm, usableSqm:usableSqm, footprint:footprint, fpPct:fpPct, pct:pct, remaining:remaining, logs:logs, approximations:approximations, unresolved:unresolved};
 }
 
-/* ============================================================ UI WIRING */
-let currentMode = "db";
-let currentFilter = "all";
+var currentMode = "db";
+var currentFilter = "all";
 
 function showView(v, btn) {
   document.getElementById("view-planner").style.display = v==="planner" ? "block" : "none";
   document.getElementById("view-catalog").style.display = v==="catalog" ? "block" : "none";
   document.getElementById("sidebar").style.display = v==="planner" ? "block" : "none";
-  document.querySelectorAll(".nav-tab").forEach(b=>b.classList.remove("active"));
+  document.querySelectorAll(".nav-tab").forEach(function(b){ b.classList.remove("active"); });
   btn.classList.add("active");
   if (v==="catalog") renderCatalog();
 }
@@ -629,7 +541,7 @@ function setMode(m) {
 }
 
 function selectStyle(el) {
-  el.parentElement.querySelectorAll(".style-chip").forEach(c=>c.classList.remove("active"));
+  el.parentElement.querySelectorAll(".style-chip").forEach(function(c){ c.classList.remove("active"); });
   el.classList.add("active");
 }
 
@@ -640,30 +552,29 @@ function loadBrief(id) {
 }
 
 function buildBriefSelect() {
-  const sel = document.getElementById("brief-select");
+  var sel = document.getElementById("brief-select");
   sel.innerHTML = "";
-  DB_BRIEFS.forEach(b=>{
-    const opt = document.createElement("option");
+  DB_BRIEFS.forEach(function(b) {
+    var opt = document.createElement("option");
     opt.value = b.brief_id;
-    const budget = "₹" + (b.budget_inr/100000).toFixed(1) + "L";
-    const warn = b.brief_id==="BR-06"?"⚠️ " : b.brief_id==="BR-07"||b.brief_id==="BR-08"?"⛔ " : "";
-    opt.textContent = `${warn}${b.brief_id} — ${b.room_type} | ${b.style_preference} | ${budget}`;
+    var budget = "Rs." + (b.budget_inr/100000).toFixed(1) + "L";
+    opt.textContent = b.brief_id + " — " + b.room_type + " | " + b.style_preference + " | " + budget;
     sel.appendChild(opt);
   });
 }
 
 function onBriefChange() {
-  const id = document.getElementById("brief-select").value;
-  const b = DB_BRIEFS.find(x=>x.brief_id===id);
+  var id = document.getElementById("brief-select").value;
+  var b = DB_BRIEFS.find(function(x){ return x.brief_id===id; });
   if (!b) return;
   document.getElementById("bp-room").textContent = b.room_type;
-  document.getElementById("bp-style").innerHTML = `<span class="tag teal">${b.style_preference}</span>`;
-  document.getElementById("bp-budget").textContent = "₹" + b.budget_inr.toLocaleString("en-IN");
-  document.getElementById("bp-size").textContent = b.length_cm && b.width_cm ? `${(b.length_cm/100).toFixed(1)}m × ${(b.width_cm/100).toFixed(1)}m` : "—";
-  document.getElementById("bp-musthaves").textContent = b.must_haves || "—";
+  document.getElementById("bp-style").innerHTML = '<span class="tag teal">'+b.style_preference+'</span>';
+  document.getElementById("bp-budget").textContent = "Rs." + b.budget_inr.toLocaleString("en-IN");
+  document.getElementById("bp-size").textContent = b.length_cm && b.width_cm ? (b.length_cm/100).toFixed(1)+"m x "+(b.width_cm/100).toFixed(1)+"m" : "—";
+  document.getElementById("bp-musthaves").textContent = Array.isArray(b.must_haves) ? b.must_haves.join(", ") : (b.must_haves||"—");
   document.getElementById("bp-constraints").textContent = b.constraints || "—";
-  const noteEl = document.getElementById("bp-note");
-  if (b.customer_note) { noteEl.textContent = """ + b.customer_note + """; noteEl.style.display="block"; }
+  var noteEl = document.getElementById("bp-note");
+  if (b.customer_note) { noteEl.textContent = '"' + b.customer_note + '"'; noteEl.style.display="block"; }
   else { noteEl.style.display="none"; }
   showLanding();
 }
@@ -676,326 +587,278 @@ function showLanding() {
 }
 
 function showTab(t, btn) {
-  document.querySelectorAll(".panel").forEach(p=>p.classList.remove("active"));
-  document.querySelectorAll(".result-tab").forEach(b=>b.classList.remove("active"));
+  document.querySelectorAll(".panel").forEach(function(p){ p.classList.remove("active"); });
+  document.querySelectorAll(".result-tab").forEach(function(b){ b.classList.remove("active"); });
   document.getElementById("panel-"+t).classList.add("active");
   btn.classList.add("active");
 }
 
 function toggle(idx) {
-  const d = document.getElementById("detail-"+idx);
-  const c = document.getElementById("chev-"+idx);
-  const o = d.classList.toggle("open");
+  var d = document.getElementById("detail-"+idx);
+  var c = document.getElementById("chev-"+idx);
+  var o = d.classList.toggle("open");
   c.textContent = o ? "▴" : "▾";
 }
 
-function fmt(n) { return n != null ? "₹"+n.toLocaleString("en-IN") : "N/A"; }
+function fmt(n) { return n!=null ? "Rs."+n.toLocaleString("en-IN") : "N/A"; }
 
 function buildItemCard(item, idx) {
-  const tierBadge =
-    item._tier==="exact" ? `<span class="badge exact">✓ Exact match</span>` :
-    item._tier==="adjacent" ? `<span class="badge adjacent">↔ ${item._adjStyle} style</span>` :
-    item._tier==="oos" ? `<span class="badge oos">📦 OOS fallback</span>` :
-    `<span class="badge any">↗ Broadened search</span>`;
-  const stockBadge = item.in_stock ?
-    `<span class="badge stock">✓ In stock</span>` :
-    `<span class="badge oosred">⚠ Out of stock</span>`;
-
-  const dims = item.width_cm && item.depth_cm ?
-    `${item.width_cm}W × ${item.depth_cm}D${item.height_cm?" × "+item.height_cm+"H":""} cm` : "—";
-
-  const styles = (item.style_tags||"").split(",").map(s=>s.trim()).filter(Boolean).join(", ");
-
-  const rationale = item._tier==="exact" ?
-    `Perfect ${item.style_tags} match from catalog.` :
-    item._tier==="adjacent" ?
-    `No exact ${item.style_tags} ${item.category} available — ${item._adjStyle} style applied as closest adjacent match.` :
-    `Broadened search applied — best available ${item.category} used regardless of style.`;
-
-  return `<div class="item-card">
-    <div class="item-header" onclick="toggle(${idx})">
-      <div class="item-swatch">${item.emoji||"📦"}</div>
-      <div class="item-meta">
-        <div class="item-name">${item.name}</div>
-        <div class="item-id">${item.item_id} · ${item.category}</div>
-        <div class="item-badges">${tierBadge}${stockBadge}</div>
-      </div>
-      <div class="item-price">${fmt(item.price_inr)}</div>
-      <span class="item-chevron" id="chev-${idx}">▾</span>
-    </div>
-    <div class="item-detail" id="detail-${idx}">
-      <div class="detail-grid">
-        <div>
-          <div class="detail-row"><span class="detail-row-k">Style(s)</span><span class="detail-row-v">${styles||"—"}</span></div>
-          <div class="detail-row"><span class="detail-row-k">Finish</span><span class="detail-row-v">${item.color_finish||"—"}</span></div>
-          <div class="detail-row"><span class="detail-row-k">Dimensions</span><span class="detail-row-v">${dims}</span></div>
-          <div class="detail-row"><span class="detail-row-k">Lead time</span><span class="detail-row-v">${item.lead_time_days!=null?item.lead_time_days+" days":"—"}</span></div>
-          <div class="detail-row"><span class="detail-row-k">Room types</span><span class="detail-row-v">${item.room_types||"—"}</span></div>
-        </div>
-        <div><div class="rationale-box">🤔 <strong>Why this item?</strong><br>${rationale} Priced at ${fmt(item.price_inr)}, leaving room for remaining items in the brief.</div></div>
-      </div>
-    </div>
-  </div>`;
+  var tierBadge = item._tier==="exact" ? '<span class="badge exact">Exact match</span>' :
+    item._tier==="adjacent" ? '<span class="badge adjacent">'+item._adjStyle+' style</span>' :
+    item._tier==="oos" ? '<span class="badge oos">OOS fallback</span>' :
+    '<span class="badge any">Broadened</span>';
+  var stockBadge = item.in_stock ? '<span class="badge stock">In stock</span>' : '<span class="badge oos">Out of stock</span>';
+  var dims = item.width_cm && item.depth_cm ? item.width_cm+"W x "+item.depth_cm+"D"+(item.height_cm?" x "+item.height_cm+"H":"")+" cm" : "—";
+  var styles = (item.style_tags||"").split(",").map(function(s){ return s.trim(); }).filter(Boolean).join(", ");
+  var rationale = item._tier==="exact" ? "Perfect style match from catalog." :
+    item._tier==="adjacent" ? "No exact "+item.style_tags+" option — "+item._adjStyle+" style used as closest match." :
+    "Broadened search — best available "+item.category+" used.";
+  return '<div class="item-card">'+
+    '<div class="item-header" onclick="toggle('+idx+')">'+
+    '<div class="item-swatch">'+(item.emoji||"📦")+'</div>'+
+    '<div class="item-meta">'+
+    '<div class="item-name">'+item.name+'</div>'+
+    '<div class="item-id">'+item.item_id+' · '+item.category+'</div>'+
+    '<div class="item-badges">'+tierBadge+stockBadge+'</div>'+
+    '</div>'+
+    '<div class="item-price">'+fmt(item.price_inr)+'</div>'+
+    '<span class="item-chevron" id="chev-'+idx+'">▾</span>'+
+    '</div>'+
+    '<div class="item-detail" id="detail-'+idx+'">'+
+    '<div class="detail-grid">'+
+    '<div>'+
+    '<div class="detail-row"><span class="detail-row-k">Style</span><span class="detail-row-v">'+styles+'</span></div>'+
+    '<div class="detail-row"><span class="detail-row-k">Finish</span><span class="detail-row-v">'+(item.color_finish||"—")+'</span></div>'+
+    '<div class="detail-row"><span class="detail-row-k">Dimensions</span><span class="detail-row-v">'+dims+'</span></div>'+
+    '<div class="detail-row"><span class="detail-row-k">Lead time</span><span class="detail-row-v">'+(item.lead_time_days!=null?item.lead_time_days+" days":"—")+'</span></div>'+
+    '</div>'+
+    '<div><div class="rationale-box">Why this item? '+rationale+' Priced at '+fmt(item.price_inr)+'.</div></div>'+
+    '</div></div></div>';
 }
 
 function gatherInput() {
   document.getElementById("ft-error").style.display = "none";
   if (currentMode === "db") {
-    const id = document.getElementById("brief-select").value;
-    const b = DB_BRIEFS.find(x=>x.brief_id===id);
+    var id = document.getElementById("brief-select").value;
+    var b = DB_BRIEFS.find(function(x){ return x.brief_id===id; });
     if (!b) return null;
+    var mh = Array.isArray(b.must_haves) ? b.must_haves.join(", ") : (b.must_haves||"");
     return {
-      input:{room:b.room_type, style:b.style_preference, budgetN:b.budget_inr, lengthCm:b.length_cm||480, widthCm:b.width_cm||360, musthaves:b.must_haves||"", constraints:b.constraints||""},
-      meta:{title:`${b.style_preference} ${b.room_type}`, sub:`${b.brief_id} · ${(b.length_cm/100).toFixed(1)}m × ${(b.width_cm/100).toFixed(1)}m · ₹${b.budget_inr.toLocaleString("en-IN")} budget`, budgetLabel:"₹"+b.budget_inr.toLocaleString("en-IN")}
+      input:{brief_id:b.brief_id, room:b.room_type, style:b.style_preference, budgetN:b.budget_inr, lengthCm:b.length_cm||480, widthCm:b.width_cm||360, musthaves:mh, constraints:b.constraints||""},
+      meta:{title:b.style_preference+" "+b.room_type, sub:b.brief_id+" · "+(b.length_cm/100).toFixed(1)+"m x "+(b.width_cm/100).toFixed(1)+"m · Rs."+b.budget_inr.toLocaleString("en-IN"), budgetLabel:"Rs."+b.budget_inr.toLocaleString("en-IN")}
     };
   }
-  const room = document.getElementById("ft-room").value;
-  const styleEl = document.querySelector("#ft-panel .style-chip.active");
-  const style = styleEl ? styleEl.textContent : "Contemporary";
-  const budgetN = parseInt(document.getElementById("ft-budget").value,10)||0;
-  const len = parseInt(document.getElementById("ft-length").value,10)||0;
-  const wid = parseInt(document.getElementById("ft-width").value,10)||0;
-  const musthaves = document.getElementById("ft-musthaves").value.trim();
-  const constraints = document.getElementById("ft-constraints").value.trim();
-  const err = document.getElementById("ft-error");
-  if (!musthaves) { err.textContent="Add at least one must-have item (e.g. sofa, rug, bed)."; err.style.display="block"; return null; }
-  if (!budgetN) { err.textContent="Enter a budget greater than ₹0."; err.style.display="block"; return null; }
-  if (!len||!wid) { err.textContent="Enter room length and width in cm."; err.style.display="block"; return null; }
+  var room = document.getElementById("ft-room").value;
+  var styleEl = document.querySelector("#ft-panel .style-chip.active");
+  var style = styleEl ? styleEl.textContent : "Contemporary";
+  var budgetN = parseInt(document.getElementById("ft-budget").value,10)||0;
+  var len = parseInt(document.getElementById("ft-length").value,10)||0;
+  var wid = parseInt(document.getElementById("ft-width").value,10)||0;
+  var musthaves = document.getElementById("ft-musthaves").value.trim();
+  var constraints = document.getElementById("ft-constraints").value.trim();
+  var err = document.getElementById("ft-error");
+  if (!musthaves) { err.textContent="Add at least one must-have item."; err.style.display="block"; return null; }
+  if (!budgetN) { err.textContent="Enter a budget greater than 0."; err.style.display="block"; return null; }
+  if (!len||!wid) { err.textContent="Enter room dimensions in cm."; err.style.display="block"; return null; }
   return {
-    input:{room,style,budgetN,lengthCm:len,widthCm:wid,musthaves,constraints},
-    meta:{title:`${style} ${room}`, sub:`Custom · ${(len/100).toFixed(1)}m × ${(wid/100).toFixed(1)}m · ₹${budgetN.toLocaleString("en-IN")} budget`, budgetLabel:"₹"+budgetN.toLocaleString("en-IN")}
+    input:{room:room, style:style, budgetN:budgetN, lengthCm:len, widthCm:wid, musthaves:musthaves, constraints:constraints},
+    meta:{title:style+" "+room, sub:"Custom · "+(len/100).toFixed(1)+"m x "+(wid/100).toFixed(1)+"m · Rs."+budgetN.toLocaleString("en-IN"), budgetLabel:"Rs."+budgetN.toLocaleString("en-IN")}
   };
 }
 
-async function runAgent() {
-  const gathered = gatherInput();
+function runAgent() {
+  var gathered = gatherInput();
   if (!gathered) return;
-  const {input,meta} = gathered;
-  const btn = document.getElementById("run-btn");
+  var input = gathered.input;
+  var meta = gathered.meta;
+  var btn = document.getElementById("run-btn");
   btn.disabled = true;
   document.getElementById("landing").style.display = "none";
   document.getElementById("results").style.display = "none";
   document.getElementById("declined").style.display = "none";
   document.getElementById("loading").style.display = "flex";
-  for (let i=1;i<=5;i++){const e=document.getElementById("ls-"+i);if(e){e.classList.remove("done","active");}}
+  for (var i=1;i<=5;i++) {
+    var e = document.getElementById("ls-"+i);
+    if (e) { e.classList.remove("done","active"); }
+  }
   document.getElementById("ls-1").classList.add("active");
-  let s=0;
-  const t=setInterval(()=>{
-    if(s>0){const p=document.getElementById("ls-"+s);if(p){p.classList.remove("active");p.classList.add("done");}}
+  var s = 0;
+  var t = setInterval(function() {
+    if (s>0) { var p=document.getElementById("ls-"+s); if(p){p.classList.remove("active");p.classList.add("done");} }
     s++;
-    if(s<=5){const c=document.getElementById("ls-"+s);if(c)c.classList.add("active");}
-    if(s>5)clearInterval(t);
-  },600);
-  const dur = result.decline ? 1800 : 3200;
-    // Try API first, fall back to local engine
-  let apiResult = null;
-  if (API_BASE) {
-    apiResult = await callDesignAPI(input.brief_id ? {brief_id: input.brief_id} : input);
-  }
+    if (s<=5) { var c=document.getElementById("ls-"+s); if(c)c.classList.add("active"); }
+    if (s>5) clearInterval(t);
+  }, 600);
 
-  setTimeout(()=>{
-    clearInterval(t); btn.disabled=false;
-    for(let i=1;i<=5;i++){const e=document.getElementById("ls-"+i);if(e){e.classList.remove("active");e.classList.add("done");}}
-    document.getElementById("loading").style.display="none";
+  // Try API if available, else local engine
+  var apiBase = (window.location.protocol !== "file:" && window.location.hostname !== "") ? window.location.origin : null;
 
-    if (apiResult) {
-      // API response — map to renderResults format
-      if (apiResult.declined) {
-        renderDeclined({decline:true, reason:apiResult.decline_reason, logs:apiResult.replan_log||[]});
-        return;
+  function finish(result) {
+    clearInterval(t);
+    btn.disabled = false;
+    for (var i=1;i<=5;i++) { var e=document.getElementById("ls-"+i); if(e){e.classList.remove("active");e.classList.add("done");} }
+    document.getElementById("loading").style.display = "none";
+    if (result.decline) {
+      document.getElementById("decline-reason").textContent = result.reason;
+      var logEl = document.getElementById("decline-log");
+      if (result.logs && result.logs.length) {
+        logEl.innerHTML = '<div class="log-list">' + result.logs.map(function(l,i){ return '<div class="log-item"><span class="log-num">'+String(i+1).padStart(2,"0")+'</span><span>'+l+'</span></div>'; }).join("") + '</div>';
       }
-      renderAPIResults(apiResult, meta);
-    } else {
-      // Local engine fallback
-      const result = planBrief(input);
-      if(result.decline){ renderDeclined(result); return; }
-      renderResults(result, meta);
+      document.getElementById("declined").style.display = "flex";
+      return;
     }
-  }, dur);
-}
-
-function renderDeclined(result) {
-  document.getElementById("decline-reason").textContent = result.reason;
-  const logEl = document.getElementById("decline-log");
-  if (result.logs && result.logs.length) {
-    logEl.innerHTML = `<div class="log-list" style="max-height:200px;overflow-y:auto">${result.logs.map((l,i)=>`<div class="log-item"><span class="log-num">${String(i+1).padStart(2,"0")}</span><span>${l}</span></div>`).join("")}</div>`;
+    renderResults(result, meta);
   }
-  document.getElementById("declined").style.display = "flex";
+
+  if (apiBase) {
+    var body = input.brief_id
+      ? JSON.stringify({brief_id: input.brief_id})
+      : JSON.stringify({free_text: {room_type:input.room, style:input.style, budget_inr:input.budgetN, length_cm:input.lengthCm, width_cm:input.widthCm, must_haves_text:input.musthaves, constraints:input.constraints||""}});
+
+    setTimeout(function() {
+      fetch(apiBase + "/api/design", {
+        method: "POST",
+        headers: {"Content-Type":"application/json"},
+        body: body
+      }).then(function(res){ return res.json(); }).then(function(api) {
+        if (api.detail) {
+          finish(planBrief(input));
+          return;
+        }
+        var EMOJI = {"Sofa":"🛋️","Armchair":"🪑","Coffee Table":"⬛","Rug":"🟫","Floor Lamp":"💡","TV Unit":"📺","Bed":"🛏️","Wardrobe":"🚪","Bedside Table":"🗄️","Curtains":"🪟","Dining Table":"🍽️","Dining Chair":"🪑","Pendant Light":"🔆","Table Lamp":"🪔","Desk":"🖥️","Office Chair":"💺","Bookshelf":"📚","Mirror":"🪞","Planter":"🪴","Cushions":"🧶"};
+        var items = (api.items||[]).map(function(i) {
+          return {item_id:i.item_id, name:i.name, category:i.category, price_inr:i.price_inr, in_stock:i.in_stock, color_finish:i.color_finish, lead_time_days:i.lead_time_days, style_tags:i.style_tags, emoji:EMOJI[i.category]||"📦", _tier:i.style_match, _adjStyle:i.adjacent_style_used, in_stock:i.in_stock, width_cm:i.width_cm, depth_cm:i.depth_cm, height_cm:i.height_cm};
+        });
+        var layout = api.layout || {};
+        finish({
+          decline: api.declined,
+          reason: api.decline_reason,
+          logs: api.replan_log||[],
+          items: items,
+          spend: api.total_spent,
+          areaSqm: layout.room_area_sqm||0,
+          usableSqm: layout.usable_sqm||0,
+          footprint: layout.footprint_sqm||0,
+          fpPct: layout.utilisation_pct||0,
+          pct: Math.round(api.total_spent / api.budget_inr * 100),
+          remaining: api.remaining,
+          approximations: [],
+          unresolved: []
+        });
+      }).catch(function() {
+        finish(planBrief(input));
+      });
+    }, 3200);
+  } else {
+    setTimeout(function() {
+      finish(planBrief(input));
+    }, 3200);
+  }
 }
 
 function renderResults(result, meta) {
-  const {items,spend,areaSqm,usableSqm,footprint,fpPct,pct,remaining,logs,approximations,unresolved} = result;
+  var items=result.items, spend=result.spend, areaSqm=result.areaSqm, usableSqm=result.usableSqm;
+  var footprint=result.footprint, fpPct=result.fpPct, pct=result.pct, remaining=result.remaining;
+  var logs=result.logs, approximations=result.approximations||[], unresolved=result.unresolved||[];
+
   document.getElementById("res-title").textContent = meta.title;
   document.getElementById("res-sub").textContent = meta.sub;
   document.getElementById("m-budget").textContent = meta.budgetLabel;
   document.getElementById("m-spent").textContent = fmt(spend);
   document.getElementById("m-items").textContent = items.length;
-  document.getElementById("m-items-sub").textContent = `${items.filter(i=>i._tier==="exact").length} exact / ${items.filter(i=>i._tier==="adjacent").length} adjacent`;
+  document.getElementById("m-items-sub").textContent = items.filter(function(i){ return i._tier==="exact"; }).length + " exact / " + items.filter(function(i){ return i._tier==="adjacent"; }).length + " adjacent";
 
-  const layoutChip = document.getElementById("m-layout-chip");
-  if(fpPct<=90){document.getElementById("m-layout").textContent="✓ Fits";layoutChip.textContent="All items clear";layoutChip.className="metric-chip ok";}
-  else if(fpPct<=105){document.getElementById("m-layout").textContent="⚠ Tight";layoutChip.textContent="Tight — review";layoutChip.className="metric-chip warn";}
-  else{document.getElementById("m-layout").textContent="✕ Over";layoutChip.textContent="Exceeds usable area";layoutChip.className="metric-chip err";}
+  var lchip = document.getElementById("m-layout-chip");
+  if (fpPct<=90) { document.getElementById("m-layout").textContent="Fits"; lchip.textContent="All clear"; lchip.className="metric-chip ok"; }
+  else if (fpPct<=105) { document.getElementById("m-layout").textContent="Tight"; lchip.textContent="Review layout"; lchip.className="metric-chip warn"; }
+  else { document.getElementById("m-layout").textContent="Over"; lchip.textContent="Exceeds usable"; lchip.className="metric-chip err"; }
 
-  const remChip = document.getElementById("m-remaining");
-  remChip.textContent = fmt(remaining) + " remaining";
-  remChip.className = "metric-chip " + (remaining<0?"err":pct>85?"warn":"ok");
+  var rem = document.getElementById("m-remaining");
+  rem.textContent = fmt(remaining) + " remaining";
+  rem.className = "metric-chip " + (remaining<0?"err":pct>85?"warn":"ok");
 
-  document.getElementById("lay-area").textContent = areaSqm.toFixed(1) + " m²";
-  document.getElementById("lay-usable").textContent = usableSqm + " m²";
-  document.getElementById("lay-footprint").textContent = footprint + " m² (" + fpPct + "%)";
-  const layBar = document.getElementById("layout-bar");
-  layBar.style.width = Math.min(fpPct,100) + "%";
-  layBar.className = "budget-bar-fill" + (fpPct>105?" over":fpPct>90?" warn":"");
-  const statusEl = document.getElementById("layout-status");
-  statusEl.className = "status-banner " + (fpPct<=90?"ok":fpPct<=105?"warn":"err");
-  document.getElementById("layout-status-text").textContent = fpPct<=90 ?
-    "✓ All selected pieces fit the room with adequate circulation space." :
-    fpPct<=105 ? "⚠ Items fit but circulation space is tight. Consider fewer or smaller pieces." :
-    "✕ Selected pieces exceed the usable area — swap the largest item for a smaller option.";
+  document.getElementById("lay-area").textContent = areaSqm + " sqm";
+  document.getElementById("lay-usable").textContent = usableSqm + " sqm";
+  document.getElementById("lay-footprint").textContent = footprint + " sqm (" + fpPct + "%)";
+  var lb = document.getElementById("layout-bar");
+  lb.style.width = Math.min(fpPct,100) + "%";
+  lb.className = "budget-bar-fill" + (fpPct>105?" over":fpPct>90?" warn":"");
+  var st = document.getElementById("layout-status");
+  st.className = "status-banner " + (fpPct<=90?"ok":fpPct<=105?"warn":"err");
+  document.getElementById("layout-status-text").textContent = fpPct<=90 ? "All pieces fit with adequate circulation." : fpPct<=105 ? "Items fit but circulation is tight." : "Pieces exceed usable area — swap largest item.";
 
-  // Layout items table
-  document.getElementById("layout-items-table").innerHTML = `<table class="boq-table"><thead><tr><th>Item</th><th>Category</th><th>Dimensions (cm)</th><th style="text-align:right">Footprint (m²)</th></tr></thead><tbody>${
-    items.map(i=>{
-      const fp = FOOTPRINT_CAT[i.category]||0.4;
-      const dims = i.width_cm&&i.depth_cm?`${i.width_cm}W×${i.depth_cm}D`:"—";
-      return `<tr><td>${i.name}</td><td>${i.category}</td><td>${dims}</td><td style="text-align:right">${fp}</td></tr>`;
-    }).join("")
-  }</tbody></table>`;
+  document.getElementById("items-grid").innerHTML = items.map(function(item,i){ return buildItemCard(item,i); }).join("");
 
-  document.getElementById("items-grid").innerHTML = items.map((item,i)=>buildItemCard(item,i)).join("");
-
-  const lines = [...approximations];
+  var lines = approximations.slice();
   if (unresolved.length) lines.push("Could not match in catalog: "+unresolved.join(", ")+".");
-  lines.push(`Budget utilisation at ${pct}% — ₹${remaining.toLocaleString("en-IN")} available for accessories, art, or plants.`);
-  lines.push("All items are from the real catalog. No items were invented.");
+  lines.push("Budget utilisation "+pct+"% — "+fmt(remaining)+" available for accessories.");
+  lines.push("All items sourced from real catalog. No items invented.");
   document.getElementById("tradeoffs").textContent = "Trade-offs & caveats
 
-" + lines.map(l=>"• "+l).join("
+" + lines.map(function(l){ return "• "+l; }).join("
 ");
 
-  // BOQ
-  document.getElementById("boq-tbody").innerHTML = items.map((item,i)=>`<tr>
-    <td style="color:var(--ink3)">${i+1}</td>
-    <td><code style="font-size:11px;background:var(--sand);padding:2px 6px;border-radius:4px">${item.item_id}</code></td>
-    <td>${item.name}</td><td>${item.category}</td>
-    <td style="font-size:12px;color:var(--ink3)">${item.color_finish||"—"}</td>
-    <td style="font-size:12px">${item.lead_time_days?item.lead_time_days+"d":"—"}</td>
-    <td style="text-align:right;font-weight:600">${fmt(item.price_inr)}</td>
-  </tr>`).join("") + `<tr class="boq-total-row"><td colspan="6">Total</td><td style="text-align:right">${fmt(spend)}</td></tr>`;
+  document.getElementById("boq-tbody").innerHTML = items.map(function(item,i){
+    return "<tr><td style='color:var(--ink3)'>"+(i+1)+"</td><td><code style='font-size:11px;background:var(--sand);padding:2px 6px;border-radius:4px'>"+item.item_id+"</code></td><td>"+item.name+"</td><td>"+item.category+"</td><td style='font-size:12px;color:var(--ink3)'>"+(item.color_finish||"—")+"</td><td style='font-size:12px'>"+(item.lead_time_days!=null?item.lead_time_days+"d":"—")+"</td><td style='text-align:right;font-weight:600'>"+fmt(item.price_inr)+"</td></tr>";
+  }).join("") + "<tr class='boq-total-row'><td colspan='6'>Total</td><td style='text-align:right'>"+fmt(spend)+"</td></tr>";
+
   document.getElementById("util-pct").textContent = pct + "%";
-  const bar = document.getElementById("budget-bar");
-  bar.style.width = Math.min(pct,100)+"%";
-  bar.className = "budget-bar-fill"+(pct>100?" over":pct>85?" warn":"");
+  var bar = document.getElementById("budget-bar");
+  bar.style.width = Math.min(pct,100) + "%";
+  bar.className = "budget-bar-fill" + (pct>100?" over":pct>85?" warn":"");
   document.getElementById("bs-spent").textContent = fmt(spend);
   document.getElementById("bs-budget").textContent = meta.budgetLabel;
   document.getElementById("bs-remaining").textContent = fmt(remaining);
 
-  // Log
-  document.getElementById("log-list").innerHTML = logs.map((l,i)=>`<div class="log-item"><span class="log-num">${String(i+1).padStart(2,"0")}</span><span>${l}</span></div>`).join("");
+  document.getElementById("log-list").innerHTML = logs.map(function(l,i){
+    return '<div class="log-item"><span class="log-num">'+String(i+1).padStart(2,"0")+'</span><span>'+l+'</span></div>';
+  }).join("");
 
   document.getElementById("landing").style.display = "none";
   document.getElementById("results").style.display = "block";
-  document.querySelectorAll(".panel").forEach(p=>p.classList.remove("active"));
+  document.querySelectorAll(".panel").forEach(function(p){ p.classList.remove("active"); });
   document.getElementById("panel-plan").classList.add("active");
-  document.querySelectorAll(".result-tab").forEach(b=>b.classList.remove("active"));
+  document.querySelectorAll(".result-tab").forEach(function(b){ b.classList.remove("active"); });
   document.querySelectorAll(".result-tab")[0].classList.add("active");
 }
 
-/* ============================================================ CATALOG BROWSER */
-function filterCatalog(cat, btn) {
+function filterCat(cat, btn) {
   currentFilter = cat;
-  document.querySelectorAll(".filter-chip").forEach(b=>b.classList.remove("active"));
+  document.querySelectorAll(".filter-chip").forEach(function(b){ b.classList.remove("active"); });
   btn.classList.add("active");
   renderCatalog();
 }
 
 function renderCatalog() {
-  const search = (document.getElementById("cat-search")||{}).value||"";
-  let items = DB_CATALOG.filter(i=>{
-    if (currentFilter==="in_stock") return i.in_stock;
-    if (currentFilter!=="all") return i.category===currentFilter;
-    return true;
+  var search = (document.getElementById("cat-search")||{}).value||"";
+  var items = DB_CATALOG.filter(function(i){
+    if (currentFilter==="all") return true;
+    return i.category===currentFilter;
   });
   if (search.trim()) {
-    const q = search.toLowerCase();
-    items = items.filter(i=>i.name.toLowerCase().includes(q)||i.category.toLowerCase().includes(q)||(i.style_tags||"").toLowerCase().includes(q)||(i.color_finish||"").toLowerCase().includes(q));
+    var q = search.toLowerCase();
+    items = items.filter(function(i){
+      return i.name.toLowerCase().indexOf(q)>=0 || i.category.toLowerCase().indexOf(q)>=0 || (i.style_tags||"").toLowerCase().indexOf(q)>=0;
+    });
   }
   document.getElementById("cat-count").textContent = items.length + " items";
-  document.getElementById("catalog-grid").innerHTML = items.map(item=>{
-    const styles = (item.style_tags||"").split(",").map(s=>s.trim()).filter(Boolean);
-    const dims = item.width_cm&&item.depth_cm?`${item.width_cm}×${item.depth_cm}${item.height_cm?"×"+item.height_cm:""} cm`:"";
-    return `<div class="catalog-card">
-      <div class="catalog-card-header">
-        <div class="catalog-swatch">${item.emoji||"📦"}</div>
-        <div>
-          <div class="catalog-name">${item.name}${!item.in_stock?`<span class="oos-tag">OOS</span>`:""}</div>
-          <div class="catalog-id">${item.item_id}</div>
-        </div>
-      </div>
-      <div class="catalog-price">${item.price_inr!=null?fmt(item.price_inr):"<span style='color:var(--red);font-size:12px'>Price TBD</span>"}</div>
-      <div class="catalog-meta">
-        <strong>${item.category}</strong>${dims?" · "+dims:""}<br>
-        ${styles.map(s=>`<span class="tag" style="margin-right:3px;margin-top:3px;display:inline-block">${s}</span>`).join("")}
-        ${item.color_finish?`<br><span style="color:var(--ink3)">${item.color_finish}</span>`:""}
-        ${item.lead_time_days?`<br>Lead: ${item.lead_time_days} days`:""}
-        ${item.room_types?`<br style="margin-top:2px"><span style="color:var(--ink3);font-size:10px">${item.room_types}</span>`:""}
-      </div>
-    </div>`;
+  document.getElementById("catalog-grid").innerHTML = items.map(function(item){
+    var styles = (item.style_tags||"").split(",").map(function(s){ return s.trim(); }).filter(Boolean);
+    return '<div class="catalog-card">'+
+      '<div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">'+
+      '<div style="width:36px;height:36px;background:var(--sand);border-radius:var(--r2);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">'+(item.emoji||"📦")+'</div>'+
+      '<div><div style="font-size:13px;font-weight:600">'+item.name+(item.in_stock?"":' <span style="display:inline-block;padding:1px 6px;border-radius:4px;font-size:10px;font-weight:700;background:var(--red2);color:var(--red)">OOS</span>')+'</div>'+
+      '<div style="font-size:10px;color:var(--ink3)">'+item.item_id+'</div></div>'+
+      '</div>'+
+      '<div style="font-size:15px;font-weight:700;margin-bottom:6px">'+(item.price_inr!=null?fmt(item.price_inr):'<span style="color:var(--red);font-size:12px">Price TBD</span>')+'</div>'+
+      '<div style="font-size:11px;color:var(--ink3);line-height:1.6"><strong>'+item.category+'</strong>'+
+      (item.width_cm&&item.depth_cm?' · '+item.width_cm+'x'+item.depth_cm+'cm':'')+'<br>'+
+      styles.map(function(s){ return '<span class="tag" style="margin-right:3px;margin-top:2px;display:inline-block">'+s+'</span>'; }).join("")+
+      (item.color_finish?'<br>'+item.color_finish:'')+'</div>'+
+      '</div>';
   }).join("");
 }
 
-/* ============================================================
-   renderAPIResults — maps FastAPI /api/design response to UI
-   ============================================================ */
-function renderAPIResults(api, meta) {
-  // Map API items to match buildItemCard format
-  const items = (api.items || []).map(i => ({
-    item_id: i.item_id, name: i.name, category: i.category,
-    price_inr: i.price_inr, in_stock: i.in_stock,
-    color_finish: i.color_finish, lead_time_days: i.lead_time_days,
-    style_tags: i.style_tags, room_types: i.room_types,
-    emoji: {Sofa:'🛋️',Armchair:'🪑','Coffee Table':'⬛',Rug:'🟫','Floor Lamp':'💡',
-            'TV Unit':'📺',Bed:'🛏️',Wardrobe:'🚪','Bedside Table':'🗄️',Curtains:'🪟',
-            'Dining Table':'🍽️','Dining Chair':'🪑','Pendant Light':'🔆','Table Lamp':'🪔',
-            Desk:'🖥️','Office Chair':'💺',Bookshelf:'📚',Mirror:'🪞',Planter:'🪴',
-            Cushions:'🧶',Ottoman:'🪑','Side Table':'⬜',Mattress:'🛏️','Wall Art':'🖼️'}[i.category] || '📦',
-    _tier: i.style_match,
-    _adjStyle: i.adjacent_style_used,
-    warnings: { is_oos: i.is_oos },
-    item: { color_finish: i.color_finish, width_cm: i.width_cm, depth_cm: i.depth_cm, height_cm: i.height_cm, in_stock: i.in_stock }
-  }));
-
-  const layout = api.layout || {};
-  const result = {
-    items,
-    spend: api.total_spent,
-    areaSqm: layout.room_area_sqm || 0,
-    usableSqm: layout.usable_sqm || 0,
-    footprint: layout.footprint_sqm || 0,
-    fpPct: layout.utilisation_pct || 0,
-    pct: api.utilisation_pct || Math.round(api.total_spent / api.budget_inr * 100),
-    remaining: api.remaining,
-    logs: api.replan_log || [],
-    approximations: [],
-    unresolved: []
-  };
-
-  // Extract approximations from trade_offs text
-  if (api.trade_offs) {
-    api.trade_offs.split('
-
-').forEach(p => {
-      if (p.startsWith('Style gaps') || p.includes('adjacent') || p.includes('OOS') || p.includes('out-of-stock')) {
-        result.approximations.push(p.replace(/^[•\-]\s*/,''));
-      }
-    });
-  }
-
-  renderResults(result, meta);
-}
-
-/* Init */
 buildBriefSelect();
 onBriefChange();
 </script>
